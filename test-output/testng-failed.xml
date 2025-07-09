@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.eox.externalhdo.amazon.test.MyCompanyMandatory">
+      <class name="com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest">
         <methods>
-          <include name="mandatoryCheck"/>
+          <include name="mandatoryCheck" invocation-numbers="0"/>
           <include name="loginSetup"/>
           <include name="initializebrowser"/>
         </methods>
-      </class> <!-- com.eox.externalhdo.amazon.test.MyCompanyMandatory -->
+      </class> <!-- com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -25,7 +25,7 @@ import com.eox.externalhdo.amazon.pages.NonownedPage;
 import com.eox.externalhdo.amazon.pages.OperationsPage;
 import com.eox.externalhdo.amazon.pages.UnitsandLaborPage;
 import com.eox.externalhdo.amazon.pages.WelcomeandAcknowledgementPage;
-import com.eox.externalhdo.elementfleet.hdolutils.AmazonUtils;
+import com.eox.externalhdo.elementfleet.hdolutils.HDOLUtils;
 import com.eox.utils.CommonFunctionUtils;
 import com.eox.utils.SupportUtils;
 import com.eox.utils.WebDriverUtils;
@@ -35,14 +35,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Basetest {
 	public static WebDriver driver;
 	public static CommonFunctionUtils cu;
-//	public static WelcomeandAcknowledgementPage mcd;
-//	public static GeneralInformationPage gi;
-//	public static OperationsPage opn;
-//	public static UnitsandLaborPage ul;
-//	public static NonownedPage nop;
-//	public static AttachmentsPage attach;
-	public static AmazonUtils aznutils;
-//	public static MyCompanyDetailsMandatoryPage mand;
+	public static WelcomeandAcknowledgementPage mcd;
+	public static GeneralInformationPage gi;
+	public static OperationsPage opn;
+	public static UnitsandLaborPage ul;
+	public static NonownedPage nop;
+	public static AttachmentsPage attach;
+	public static HDOLUtils aznutils;
+	public static MyCompanyDetailsMandatoryPage mand;
 	public static WelcomeApplicationAcknoweldgementPage first;
 	public static ManCheckGeneralInformationPage third;
 	public static ManCheckOpearionsPage fourth;
@@ -52,22 +52,21 @@ public class Basetest {
 	@BeforeSuite
 	public static void initializebrowser() {
 		driver = WebDriverUtils.getDriver();
-		driver.get("https://dsprmstag.hubdriveonline.com/#login");
+		driver.get("https://hdoustest.eoxvantage.com/#login");
 		cu = new CommonFunctionUtils(driver, 10);
 		first = new WelcomeApplicationAcknoweldgementPage(driver);
 		third = new ManCheckGeneralInformationPage(driver);
 		fourth = new ManCheckOpearionsPage(driver);
 		fifth = new ManCheckUnitsLaborPage(driver);
 		sixth = new ManCheckHiredAutosPage(driver);
-//		mcd = new WelcomeandAcknowledgementPage(driver);
-//		gi = new GeneralInformationPage(driver);
-//		opn = new OperationsPage(driver);
-//		ul = new UnitsandLaborPage(driver);
-//		nop = new NonownedPage(driver);
-//		attach = new AttachmentsPage(driver);
-		aznutils = new AmazonUtils(driver);
-//		mand = new MyCompanyDetailsMandatoryPage(driver);
-
+		mcd = new WelcomeandAcknowledgementPage(driver);
+		gi = new GeneralInformationPage(driver);
+		opn = new OperationsPage(driver);
+		ul = new UnitsandLaborPage(driver);
+		nop = new NonownedPage(driver);
+		attach = new AttachmentsPage(driver);
+		aznutils = new HDOLUtils(driver);
+		mand = new MyCompanyDetailsMandatoryPage(driver);
 	}
 
 	@BeforeClass
@@ -84,7 +83,6 @@ public class Basetest {
 	public List<HashMap<String, String>> getJsonDataToMap(String filepath) throws IOException {
 		// read json to string
 		String jsonContent = FileUtils.readFileToString(new File(filepath), StandardCharsets.UTF_8);
-
 		// String to Json using Jackson databind
 		ObjectMapper mapper = new ObjectMapper();
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent,

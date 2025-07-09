@@ -12,23 +12,30 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.eox.utils.CommonFunctionUtils;
 
-public class AmazonUtils {
+public class HDOLUtils {
 	public static WebDriver driver;
 
-	public AmazonUtils(WebDriver driver) {
-		AmazonUtils.driver = driver;
+	public HDOLUtils(WebDriver driver) {
+		HDOLUtils.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
+
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+
+	// 1. esign pdf's
 
 	String firstTab = null;
 	String secondTab = null;
 	int count = 0;
 	WebElement hyperlink;
 	WebElement nextButton;
+	public WebElement element;
 
 	public void esignPdf(String pdfName, String title) {
 		WebElement esignclick = driver.findElement(By.xpath(
@@ -122,33 +129,45 @@ public class AmazonUtils {
 		}
 
 	}
+
+	// Draw Signature
 	public void drawSignature() {
-    WebElement canvas = driver.findElement(By.xpath("//canvas[@class='signature-pad-canvas']"));
-    ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", canvas);
-    int canvasWidth = canvas.getSize().getWidth();
-    int canvasHeight = canvas.getSize().getHeight();
+		WebElement canvas = driver.findElement(By.xpath("//canvas[@class='signature-pad-canvas']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", canvas);
+		int canvasWidth = canvas.getSize().getWidth();
+		int canvasHeight = canvas.getSize().getHeight();
 
-    // Start near the left-middle, with enough margin
-    int startX = (int) (canvasWidth * 0.15);
-    int startY = (int) (canvasHeight * 0.5);
+		// Start near the left-middle, with enough margin
+		int startX = (int) (canvasWidth * 0.15);
+		int startY = (int) (canvasHeight * 0.5);
 
-    Actions action = new Actions(driver);
-    action.moveToElement(canvas, startX, startY)
-          .clickAndHold();
+		Actions action = new Actions(driver);
+		action.moveToElement(canvas, startX, startY).clickAndHold();
 
-    // Draw a smooth, wavy line to simulate a signature
-    int[][] deltas = {
-        {30, -10}, {30, 15}, {30, -10}, {30, 15}, // wave
-        {20, 0}, {10, -10}, {10, 10}, {20, 0},    // tail
-    };
+		// Draw a smooth, wavy line to simulate a signature
+		int[][] deltas = { { 30, -10 }, { 30, 15 }, { 30, -10 }, { 30, 15 }, // wave
+				{ 20, 0 }, { 10, -10 }, { 10, 10 }, { 20, 0 }, // tail
+		};
 
-    for (int[] delta : deltas) {
-        action.moveByOffset(delta[0], delta[1]);
-    }
+		for (int[] delta : deltas) {
+			action.moveByOffset(delta[0], delta[1]);
+		}
 
-    action.release().perform();
-    System.out.println("Optimized signature drawing completed.");
+		action.release().perform();
+		System.out.println("Optimized signature drawing completed.");
+	}
+
+	// Tile Validation Check
+
+	public void tileValidation(String tileName) {
+		driver.findElement(By.xpath("//*[contains(text(),'" + tileName + "')]"));
+
+	}
+
+	public void addInputToDatagrid(String nameValue, String inputValue) {
+		element = driver.findElement(By.xpath("//*[contains(@name,'" + nameValue + "')]"));
+		wait.until(ExpectedConditions.visibilityOf(element));
+		element.sendKeys(inputValue);
+	}
+
 }
-}
-
-	

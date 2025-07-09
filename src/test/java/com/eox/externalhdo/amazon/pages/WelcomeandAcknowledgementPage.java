@@ -18,7 +18,6 @@ public class WelcomeandAcknowledgementPage {
 	}
 
 	public void MCDform() {
-
 		driver.findElement(By.xpath("//i[@class='fa fa-refresh']//parent::button[@class='btn btn-primary']")).click();
 		driver.findElement(By.xpath("//a[@page-id='78f4380e-44a0-470a-9042-3fc00efaba71']")).click();
 		CommonFunctionUtils.waitForSpinnerGoesOff();
@@ -35,7 +34,6 @@ public class WelcomeandAcknowledgementPage {
 		CommonFunctionUtils.checkBoxClick("Authorization Letter.");
 		CommonFunctionUtils.checkBoxClick("License Agreement.");
 		CommonFunctionUtils.radioButtonSelect("no", "Do you want to share your Netradyne data with HUB?");
-
 	}
 
 }

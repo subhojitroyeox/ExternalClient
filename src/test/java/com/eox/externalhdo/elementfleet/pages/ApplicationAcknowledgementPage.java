@@ -52,14 +52,17 @@ public class ApplicationAcknowledgementPage {
 		CommonFunctionUtils.elementClick(manageapplication);
 		CommonFunctionUtils.waitForSpinnerGoesOff();
 		Thread.sleep(2000);
-		CommonFunctionUtils.waitForVisibility(nextbutton);
-		CommonFunctionUtils.elementClick(nextbutton);
-		CommonFunctionUtils.waitForVisibility(nextbutton);
+		CommonFunctionUtils.activeButtonClick("Next");
+		try {
+			CommonFunctionUtils.waitForSpinnerGoesOff();
+		} catch (Exception e) {
+			System.out.println("Exception Occured");
+			CommonFunctionUtils.waitForSpinnerGoesOff();
+			CommonFunctionUtils.checkBoxClick("I have read the HDOL Privacy Policy");
+			CommonFunctionUtils.checkBoxClick("HDOL terms and conditions.");
+			CommonFunctionUtils.checkBoxClick("End User License Agreement");
+		}
 
-//		CommonFunctionUtils.checkBoxClick("I have read the HDOL Privacy Policy");
-//		CommonFunctionUtils.checkBoxClick("HDOL terms and conditions.");
-//		CommonFunctionUtils.checkBoxClick("End User License Agreement");
-//		
 //		CommonFunctionUtils.elementClick(nextbutton);
 //		
 //		CommonFunctionUtils.elementClick(nextbutton);

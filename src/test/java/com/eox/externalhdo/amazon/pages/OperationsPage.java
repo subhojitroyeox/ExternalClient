@@ -31,8 +31,6 @@ public class OperationsPage {
 		CommonFunctionUtils.selectItemFromDropdown("Line of Business", input.get("Line of Business"));
 		CommonFunctionUtils.excelUpload("Upload Loss Run", "DSP_risk_management_units.xlsx");
 		CommonFunctionUtils.activeButtonClick("Next");
-//		System.out.println(input.get("name one"));
-//		System.out.println(input.get("first two"));
 
 	}
 

@@ -27,7 +27,11 @@ public class MyCompanyMandatoryTest extends Basetest {
 		third.giFormsubmission2(input);
 		Thread.sleep(1000);
 		aznutils.addInputToDatagrid("[1][locationType]", "Location #1");
+<<<<<<< HEAD
 		driver.findElement(By.xpath("//button[@ref='datagrid-dataGrid1-addRow']")).click();
+=======
+		driver.findElement(By.xpath("//button[@ref='datagrid-dataGrid1-addRow']")).click();	
+>>>>>>> 4bec8d9b0069b90632aee01e3352ec61b9aff608
 		aznutils.addInputToDatagrid("[2][locationType]", "Location #1");
 //		fourth.operationsFormSubmission(input);
 //		fifth.unitsFileUpload();
@@ -36,7 +40,7 @@ public class MyCompanyMandatoryTest extends Basetest {
 //		sixth.hiredAutosFormsubmission();
 
 	}
-
+	
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = getJsonDataToMap(

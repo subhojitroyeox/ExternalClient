@@ -20,28 +20,16 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import com.eox.utils.CommonFunctionUtils;
 import com.eox.utils.SupportUtils;
 
-<<<<<<<< HEAD:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/ExternalUtils.java
 public class ExternalUtils {
 	public static WebDriver driver;
 
 	public ExternalUtils(WebDriver driver) {
 		ExternalUtils.driver = driver;
-========
-public class HDOLUtils {
-	public static WebDriver driver;
-
-	public HDOLUtils(WebDriver driver) {
-		HDOLUtils.driver = driver;
->>>>>>>> 4bec8d9b0069b90632aee01e3352ec61b9aff608:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/HDOLUtils.java
 		PageFactory.initElements(driver, this);
 
 	}
 
-<<<<<<<< HEAD:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/ExternalUtils.java
 	static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
-========
-	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
->>>>>>>> 4bec8d9b0069b90632aee01e3352ec61b9aff608:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/HDOLUtils.java
 
 	// 1. esign pdf's
 
@@ -51,11 +39,8 @@ public class HDOLUtils {
 	WebElement hyperlink;
 	WebElement nextButton;
 	public WebElement element;
-<<<<<<<< HEAD:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/ExternalUtils.java
 	public WebElement dropdownClick;
 	public List<WebElement> dropdownValues;
-========
->>>>>>>> 4bec8d9b0069b90632aee01e3352ec61b9aff608:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/HDOLUtils.java
 
 	public void esignPdf(String pdfName, String title) {
 		WebElement esignclick = driver.findElement(By.xpath(
@@ -172,7 +157,6 @@ public class HDOLUtils {
 		for (int[] delta : deltas) {
 			action.moveByOffset(delta[0], delta[1]);
 		}
-<<<<<<<< HEAD:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/ExternalUtils.java
 
 		action.release().perform();
 		System.out.println("Optimized signature drawing completed.");
@@ -206,24 +190,4 @@ public class HDOLUtils {
 		options.stream().filter(option -> option.getText().equalsIgnoreCase(valueToSelect)).findFirst()
 				.ifPresent(WebElement::click);
 	}
-========
-
-		action.release().perform();
-		System.out.println("Optimized signature drawing completed.");
-	}
-
-	// Tile Validation Check
-
-	public void tileValidation(String tileName) {
-		driver.findElement(By.xpath("//*[contains(text(),'" + tileName + "')]"));
-
-	}
-
-	public void addInputToDatagrid(String nameValue, String inputValue) {
-		element = driver.findElement(By.xpath("//*[contains(@name,'" + nameValue + "')]"));
-		wait.until(ExpectedConditions.visibilityOf(element));
-		element.sendKeys(inputValue);
-	}
-
->>>>>>>> 4bec8d9b0069b90632aee01e3352ec61b9aff608:src/main/java/com/eox/externalhdo/elementfleet/hdolutils/HDOLUtils.java
 }

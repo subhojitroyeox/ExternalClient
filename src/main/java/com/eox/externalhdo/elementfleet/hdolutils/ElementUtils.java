@@ -2,8 +2,12 @@ package com.eox.externalhdo.elementfleet.hdolutils;
 
 import java.time.Duration;
 import java.util.List;
-import org.openqa.selenium.*;
-import org.openqa.selenium.support.ui.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ElementUtils {
 	public static void click(WebElement element) {

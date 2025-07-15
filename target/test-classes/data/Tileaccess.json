@@ -2,7 +2,7 @@
   "roles": {
     "Admin": [
       "Insurance",
-      "USER MA",
+      "USER MANAGEMENT",
       "Invoice and Payables"
     ],
     "User": [

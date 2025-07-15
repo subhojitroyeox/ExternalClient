@@ -1,0 +1,32 @@
+{
+  "roles": {
+    "Admin": [
+      "Insurance",
+      "USER MA",
+      "Invoice and Payables"
+    ],
+    "User": [
+      "Insurance",
+       "Invoice and Payables"
+    ],
+	"Producer":[
+		"Insurance",
+		"Element Fleet"
+	],
+	"EOX Backoffice Verifier":[
+		"Insurance",
+		 "Element Fleet UM",
+		 "Invoice and Payables"
+	],
+	"SPG Covering Ops Account Manager":[
+		"Insurance",
+		"Element Fleet UM",
+	     "Invoice and Payables"
+	],
+	"Element Admin":
+	[
+		"Insurance",
+		"Invoice and Payables"
+	]
+	}
+}

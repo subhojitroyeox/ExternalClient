@@ -1,32 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-03T16:25:16 IST" name="Default suite" finished-at="2025-07-03T16:26:01 IST" duration-ms="45401">
+  <suite started-at="2025-07-15T19:02:19 IST" name="Default suite" finished-at="2025-07-15T19:02:32 IST" duration-ms="12536">
     <groups>
     </groups>
-    <test started-at="2025-07-03T16:25:16 IST" name="Default test" finished-at="2025-07-03T16:26:01 IST" duration-ms="45401">
-      <class name="com.eox.externalhdo.amazon.test.MyCompanyMandatory">
-        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:com.eox.externalhdo.amazon.test.MyCompanyMandatory@7a8c8dcf]" started-at="2025-07-03T16:25:08 IST" name="initializebrowser" finished-at="2025-07-03T16:25:16 IST" duration-ms="7640" status="PASS">
+    <test started-at="2025-07-15T19:02:19 IST" name="Default test" finished-at="2025-07-15T19:02:32 IST" duration-ms="12536">
+      <class name="com.eox.externalhdo.elementfleet.test.TileValidationTest">
+        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:com.eox.externalhdo.elementfleet.test.TileValidationTest@4116aac9]" started-at="2025-07-15T19:02:08 IST" name="initializebrowser" finished-at="2025-07-15T19:02:19 IST" duration-ms="11217" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializebrowser -->
-        <test-method is-config="true" signature="loginSetup()[pri:0, instance:com.eox.externalhdo.amazon.test.MyCompanyMandatory@7a8c8dcf]" started-at="2025-07-03T16:25:16 IST" name="loginSetup" finished-at="2025-07-03T16:25:28 IST" duration-ms="12291" status="PASS">
+        <test-method is-config="true" signature="loginSetup()[pri:0, instance:com.eox.externalhdo.elementfleet.test.TileValidationTest@4116aac9]" started-at="2025-07-15T19:02:19 IST" name="loginSetup" finished-at="2025-07-15T19:02:20 IST" duration-ms="1032" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginSetup -->
-        <test-method signature="mandatoryCheck(java.util.HashMap)[pri:0, instance:com.eox.externalhdo.amazon.test.MyCompanyMandatory@7a8c8dcf]" started-at="2025-07-03T16:25:28 IST" name="mandatoryCheck" data-provider="getData" finished-at="2025-07-03T16:26:01 IST" duration-ms="32864" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{Line of Business=Auto Liability, Policy Number=234323, first two=test, Company type=Limited Liability Corporation, Total Estimated Monthly Payroll for Garage Employees=1000, Do any employees take a scheduled vehicle home at night?=yes, Primary Owner Last Name=Kumar, Do any drivers provide installation or assembly services?=yes, Are you contracted with any other motor carrier?=yes, Describe Other Employee Role Types=NA, Number of Clerical Employees=5, Broker Email=testbroker+34@email.com, Principle Garaging Address=test principle add, Years under Current Management=2, Amazon DSP Number=BFLG, Broker Company=test broker company, City=testcity, Total Estimated Monthly Payroll specific to drivers performing installation or assembly services=23,432, Primary Owner First Name=Rakshith, State=Alaska, Have you ever allowed others to operate under your authority?=yes, First Client Claims Contact Name=Edge test, Insurer=test insurer, Expiration Date=06-01-2027, Percentage of Ownership=80, First Client Claims Contact Email=edge@testuser.com, Are any filings required?=yes, Mailing Address=test mailing add, Location #1=test location, Total Estimated Monthly Payroll for Clerical Employees=1500, Date First Contracted with Amazon=06-04-2025, Description of Operations at this Location=Parking, Total Estimated Monthly Payroll for Employees Outside Sales=9000, Is there more than one owner?=yes, What types of responsibilities does this owner/officer perform?=Nonhelper, Number of Other Employees=3, Zip Code=87898, Street Address=test address, Effective Date=06-01-2026, Insurer Email=testinsurer@email.com, Do employees, including admin staff, ever use personal vehicles while working?=yes, What percentage of vehicles travel outside of 50 miles radius?=100, Total Estimated Monthly Payroll for Drivers not including installation or assembly services=1999, Broker FirstName=test, Year Business Established=2020, Number of Employees Outside Sales=9, Number of Garage Employees=5, Number of Drivers=8, Total Estimated Monthly Payroll for Other Employees=566, annual cost=50, limit of insurance=3, Number of Vehicles=123, If yes, please list=test list, how many=5}]]>
-              </value>
-            </param>
-          </params>
+        <test-method signature="clientadminTilevalidation()[pri:0, instance:com.eox.externalhdo.elementfleet.test.TileValidationTest@4116aac9]" started-at="2025-07-15T19:02:20 IST" name="clientadminTilevalidation" finished-at="2025-07-15T19:02:32 IST" duration-ms="11413" status="FAIL">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1590)
+at org.testng.Assert.assertTrue(Assert.java:57)
+at org.testng.Assert.assertTrue(Assert.java:67)
+at com.eox.externalhdo.elementfleet.test.TileValidationTest.clientadminTilevalidation(TileValidationTest.java:16)
+at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
+at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
+at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
+at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
+at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
+at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
+at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+at org.testng.TestRunner.privateRun(TestRunner.java:741)
+at org.testng.TestRunner.run(TestRunner.java:616)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
+at org.testng.SuiteRunner.run(SuiteRunner.java:312)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
+at org.testng.TestNG.runSuites(TestNG.java:1112)
+at org.testng.TestNG.run(TestNG.java:1079)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- mandatoryCheck -->
-      </class> <!-- com.eox.externalhdo.amazon.test.MyCompanyMandatory -->
+        </test-method> <!-- clientadminTilevalidation -->
+      </class> <!-- com.eox.externalhdo.elementfleet.test.TileValidationTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

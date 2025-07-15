@@ -33,7 +33,6 @@ public class GeneralInformationPage {
 		CommonFunctionUtils.radioButtonSelect(input.get("Are any filings required?"), "Are any filings required?");
 		CommonFunctionUtils.addTextToTheInputField("If yes, please list", input.get("If yes, please list"));
 		CommonFunctionUtils.radioButtonSelect("no", "Are your loss runs currently available in Loss Runs Pro?");
-		
 		CommonFunctionUtils.radioButtonSelect(input.get("Are you contracted with any other motor carrier?"),
 				"Are you contracted with any other motor carrier?");
 		CommonFunctionUtils.addTextToTheInputField("Date First Contracted with Amazon",
@@ -44,18 +43,15 @@ public class GeneralInformationPage {
 		CommonFunctionUtils.addTextToTheInputField("Primary Owner Last Name", input.get("Primary Owner Last Name"));
 		CommonFunctionUtils.addTextToTheInputField("Percentage of Ownership", input.get("Percentage of Ownership"));
 		CommonFunctionUtils.radioButtonSelect(input.get("Is there more than one owner?"),
-				"Is there more than one owner?");
-		
+				"Is there more than one owner?");	
 		CommonFunctionUtils.addTextToTheInputField("Owner First Name", "test owner");
 		CommonFunctionUtils.addTextToTheInputField("Owner Last Name", "test last owner");
 		CommonFunctionUtils.addTextToTheInputField("Title", "test title");
-		
 		driver.findElement(By.xpath("//input[contains(@name,'[0][percentageOfOwnership]')]")).sendKeys("20");
 		CommonFunctionUtils.addTextToTheInputField("First Client Claims Contact Name",
 				input.get("First Client Claims Contact Name"));
 		CommonFunctionUtils.addEmailToTheInputField("First Client Claims Contact Email",
 				input.get("First Client Claims Contact Email"));
-
 		CommonFunctionUtils.addTextToTheInputField("Location #1", input.get("Location #1"));
 		CommonFunctionUtils.selectItemFromDropdown("Description of Operations at this Location",
 				input.get("Description of Operations at this Location"));

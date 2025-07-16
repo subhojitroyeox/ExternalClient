@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest">
+      <class name="com.eox.externalhdo.elementfleet.tests.CreateAccountingUserFromClientAdmin">
         <methods>
-          <include name="mandatoryCheck" invocation-numbers="0"/>
           <include name="loginSetup"/>
+          <include name="createProducer" invocation-numbers="0"/>
+          <include name="terminate"/>
           <include name="initializebrowser"/>
         </methods>
-      </class> <!-- com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest -->
+      </class> <!-- com.eox.externalhdo.elementfleet.tests.CreateAccountingUserFromClientAdmin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

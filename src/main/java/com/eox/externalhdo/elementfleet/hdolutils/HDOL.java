@@ -17,11 +17,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.eox.utils.CommonFunctionUtils;
 
-public class HDOLUtils {
+public class HDOL {
 	public static WebDriver driver;
 
-	public HDOLUtils(WebDriver driver) {
-		HDOLUtils.driver = driver;
+	public HDOL(WebDriver driver) {
+		HDOL.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}

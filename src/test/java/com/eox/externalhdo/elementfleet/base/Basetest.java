@@ -9,10 +9,14 @@ import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 
-import com.eox.externalhdo.elementfleet.hdolutils.HDOLUtils;
+import com.eox.externalhdo.elementfleet.pages.UserManagementClientAdminPage;
+import com.eox.externalhdo.elementfleet.pages.UserManagementEditPage;
+import com.eox.externalhdo.elementfleet.pages.UserManagementPage;
 import com.eox.externalhdo.elementfleet.hdolutils.ElementUtils;
 import com.eox.utils.CommonFunctionUtils;
 import com.eox.utils.HDOUtils;
@@ -24,27 +28,37 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Basetest {
 	public static WebDriver driver;
 	public static CommonFunctionUtils cu;
-	
+	public static UserManagementPage userManagementPage;
+	public static HDOUtils hdoutils;
+	public static UserManagementClientAdminPage userManagementClientAdminPage;
+	public static UserManagementEditPage userManagementEditPage ;
 
-	@BeforeSuite
+	@BeforeTest
 	public static void initializebrowser() {
 		driver = WebDriverUtils.getDriver();
 		driver.get("https://hdoustest.eoxvantage.com/#login");
 		cu = new CommonFunctionUtils(driver, 10);
-		
+		userManagementPage = new UserManagementPage(driver);
+		userManagementClientAdminPage = new UserManagementClientAdminPage(driver);
+		userManagementEditPage = new UserManagementEditPage(driver);
+		hdoutils = new HDOUtils(driver);
 
 	}
 
-	@BeforeClass
+	@BeforeTest
 	public static void loginSetup() {
 		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("elementusername"),
-				SupportUtils.getProperty("elementpassword"));
+		SupportUtils.getProperty("elementpassword"));
+//		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("hubadminusername"),
+//		SupportUtils.getProperty("hubadminpassword"));
+//		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("clientadminusername"),
+//		SupportUtils.getProperty("clientadminpassword"));
 	}
-	// @AfterSuite
-//	public static void terminate()
-//	{
-//		WebDriverUtils.quitDriver();
-//	}
+	 @AfterTest
+	public static void terminate()
+	{
+		 driver.close();
+	}
 	public List<HashMap<String, String>> getJsonDataToMap(String filepath) throws IOException {
 		// read json to string
 		String jsonContent = FileUtils.readFileToString(new File(filepath), StandardCharsets.UTF_8);

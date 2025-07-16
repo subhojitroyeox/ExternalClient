@@ -5,7 +5,7 @@ import java.util.HashMap;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import com.eox.externalhdo.elementfleet.hdolutils.HDOLUtils;
+import com.eox.externalhdo.elementfleet.hdolutils.HDOL;
 import com.eox.utils.CommonFunctionUtils;
 
 public class ManCheckGeneralInformationPage {

@@ -1,0 +1,36 @@
+package com.eox.externalhdo.elementfleet.pages;
+
+import java.util.HashMap;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+import com.eox.utils.CommonFunctionUtils;
+import com.eox.utils.HDOUtils;
+
+public class UserManagementEditPage 
+{
+    public static WebDriver driver;
+    public UserManagementEditPage(WebDriver driver) 
+    {
+        UserManagementPage.driver = driver;
+        PageFactory.initElements(driver, this);
+    }
+
+//    @FindBy(xpath = "//a[@page-id='6e358417-2b71-4f4f-8640-ded07d4a1267']")
+//    WebElement tileclick;
+
+    public void umPage(HashMap<String, String> input) throws InterruptedException 
+    {
+        CommonFunctionUtils.waitForSpinnerGoesOff();
+        driver.findElement(By.xpath("//i[@class='fa fa-refresh']//parent::button[@class='btn btn-primary']")).click();
+        HDOUtils.openTiles("Element Fleet UM","Launch" );
+//        tileclick.click();
+        
+        
+    }
+
+}

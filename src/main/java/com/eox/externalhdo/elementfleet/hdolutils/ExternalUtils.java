@@ -3,10 +3,12 @@ package com.eox.externalhdo.elementfleet.hdolutils;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -16,18 +18,25 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.eox.utils.CommonFunctionUtils;
+import com.eox.utils.SupportUtils;
 
 public class HDOL {
 	public static WebDriver driver;
 
 	public HDOL(WebDriver driver) {
 		HDOL.driver = driver;
+		
+public class ExternalUtils {
+	public static WebDriver driver;
+
+	public ExternalUtils(WebDriver driver) {
+		ExternalUtils.driver = driver;
 		PageFactory.initElements(driver, this);
 
 	}
-
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
+	static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 	// 1. esign pdf's
 
 	String firstTab = null;
@@ -36,6 +45,8 @@ public class HDOL {
 	WebElement hyperlink;
 	WebElement nextButton;
 	public WebElement element;
+	public WebElement dropdownClick;
+	public List<WebElement> dropdownValues;
 
 	public void esignPdf(String pdfName, String title) {
 		WebElement esignclick = driver.findElement(By.xpath(
@@ -170,4 +181,36 @@ public class HDOL {
 		element.sendKeys(inputValue);
 	}
 
+		action.release().perform();
+		System.out.println("Optimized signature drawing completed.");
+	}
+
+	// Tile Validation Check
+
+	public void tileValidation(String tileName) {
+		driver.findElement(By.xpath("//*[contains(text(),'" + tileName + "')]"));
+
+	}
+
+	public void addInputToDatagrid(String nameValue, String inputValue) {
+		element = driver.findElement(By.xpath("//*[contains(@name,'" + nameValue + "')]"));
+		wait.until(ExpectedConditions.visibilityOf(element));
+		element.sendKeys(inputValue);
+	}
+
+	public void elementClick(String namevalue) {
+		driver.findElement(By.xpath("//*[contains(@name,'" + namevalue + "')]/..")).click();
+
+	}
+
+	public void selectChoicesDropdownValue(String namevalue, String valueToSelect) throws InterruptedException {
+		// 1. Click the dropdown to open options
+		element = driver.findElement(By.xpath("//*[contains(@name,'" + namevalue + "')]/.."));
+		element.click();
+		Thread.sleep(2000);
+		List<WebElement> options = driver.findElements(By.xpath("//*[contains(@name,'" + namevalue
+				+ "')]/parent::div/following-sibling::div/div//div[contains(@class,'choices__')]"));
+		options.stream().filter(option -> option.getText().equalsIgnoreCase(valueToSelect)).findFirst()
+				.ifPresent(WebElement::click);
+	}
 }

@@ -25,7 +25,11 @@ import com.eox.externalhdo.amazon.pages.NonownedPage;
 import com.eox.externalhdo.amazon.pages.OperationsPage;
 import com.eox.externalhdo.amazon.pages.UnitsandLaborPage;
 import com.eox.externalhdo.amazon.pages.WelcomeandAcknowledgementPage;
+<<<<<<< HEAD
 import com.eox.externalhdo.elementfleet.hdolutils.HDOL;
+=======
+import com.eox.externalhdo.elementfleet.hdolutils.ExternalUtils;
+>>>>>>> 0be5ff284db181b83568e89486517fa11f806d3b
 import com.eox.utils.CommonFunctionUtils;
 import com.eox.utils.SupportUtils;
 import com.eox.utils.WebDriverUtils;
@@ -41,7 +45,11 @@ public class Basetest {
 	public static UnitsandLaborPage ul;
 	public static NonownedPage nop;
 	public static AttachmentsPage attach;
+<<<<<<< HEAD
 	public static HDOL aznutils;
+=======
+	public static ExternalUtils aznutils;
+>>>>>>> 0be5ff284db181b83568e89486517fa11f806d3b
 	public static MyCompanyDetailsMandatoryPage mand;
 	public static WelcomeApplicationAcknoweldgementPage first;
 	public static ManCheckGeneralInformationPage third;
@@ -65,7 +73,11 @@ public class Basetest {
 		ul = new UnitsandLaborPage(driver);
 		nop = new NonownedPage(driver);
 		attach = new AttachmentsPage(driver);
+<<<<<<< HEAD
 		aznutils = new HDOL(driver);
+=======
+		aznutils = new ExternalUtils(driver);
+>>>>>>> 0be5ff284db181b83568e89486517fa11f806d3b
 		mand = new MyCompanyDetailsMandatoryPage(driver);
 	}
 

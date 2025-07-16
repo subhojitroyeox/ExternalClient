@@ -19,13 +19,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.eox.utils.CommonFunctionUtils;
 import com.eox.utils.SupportUtils;
-
-public class HDOL {
-	public static WebDriver driver;
-
-	public HDOL(WebDriver driver) {
-		HDOL.driver = driver;
-		
+	
 public class ExternalUtils {
 	public static WebDriver driver;
 
@@ -36,7 +30,7 @@ public class ExternalUtils {
 	}
 	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 
-	static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+	//static WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
 	// 1. esign pdf's
 
 	String firstTab = null;
@@ -168,30 +162,6 @@ public class ExternalUtils {
 		System.out.println("Optimized signature drawing completed.");
 	}
 
-	// Tile Validation Check
-
-	public void tileValidation(String tileName) {
-		driver.findElement(By.xpath("//*[contains(text(),'" + tileName + "')]"));
-
-	}
-
-	public void addInputToDatagrid(String nameValue, String inputValue) {
-		element = driver.findElement(By.xpath("//*[contains(@name,'" + nameValue + "')]"));
-		wait.until(ExpectedConditions.visibilityOf(element));
-		element.sendKeys(inputValue);
-	}
-
-		action.release().perform();
-		System.out.println("Optimized signature drawing completed.");
-	}
-
-	// Tile Validation Check
-
-	public void tileValidation(String tileName) {
-		driver.findElement(By.xpath("//*[contains(text(),'" + tileName + "')]"));
-
-	}
-
 	public void addInputToDatagrid(String nameValue, String inputValue) {
 		element = driver.findElement(By.xpath("//*[contains(@name,'" + nameValue + "')]"));
 		wait.until(ExpectedConditions.visibilityOf(element));
@@ -213,4 +183,11 @@ public class ExternalUtils {
 		options.stream().filter(option -> option.getText().equalsIgnoreCase(valueToSelect)).findFirst()
 				.ifPresent(WebElement::click);
 	}
-}
+	public String PopupValidation() {
+		element = driver.findElement(
+				By.xpath("//div[contains(@class,'swal2-icon-success')]/div[@class='swal2-html-container']"));
+		wait.until(ExpectedConditions.visibilityOf(element));
+		String popupMessage = element.getText();
+		return popupMessage;
+	}
+	}

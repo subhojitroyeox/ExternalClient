@@ -15,7 +15,9 @@ public class FormSubmitPage extends ExternalUtils {
 	}
 
 	public void submitForm() {
+		CommonFunctionUtils.activeButtonClick("Next");
 		CommonFunctionUtils.addTextToTheInputField("Date", "07-15-2025");
+		driver.findElement(By.xpath("//i[@class='fa fa-calendar']")).click();
 		drawSignature();
 		CommonFunctionUtils.waitForClickableElement(driver.findElement(By.xpath("//button[text()='Submit Form']")));
 		try {

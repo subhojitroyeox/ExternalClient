@@ -20,11 +20,12 @@ public class UnitsEquipmentDataGridPage {
 	WebElement unitno;
 	@FindBy(xpath = "//input[contains(@id,'UnitNumber')]")
 	WebElement eqpno;
-	@FindBy(xpath = "//input[contains(@id,'eqUnitNumber')]")
+	@FindBy(xpath = "//input[contains(@id,'eqUnitNumber1')]")
 	WebElement noneqpno;
 
 	public void elementLeasedUnits() {
 		try {
+			CommonFunctionUtils.radioButtonSelect("no", "Do you want to add more than 5 Element Leased Units?");
 			CommonFunctionUtils.radioButtonSelect("no", "Do you want to add more than 5 Element Leased Units?");
 			if (unitno.isDisplayed()) {
 				CommonFunctionUtils.addTextToTheInputField("Unit Number", "Unit-123");
@@ -77,56 +78,59 @@ public class UnitsEquipmentDataGridPage {
 				CommonFunctionUtils.activeButtonClick("Next");
 			}
 		} catch (Exception e) {
+			System.out.println("Exception Leased Equipment is not clickable");
 			CommonFunctionUtils.activeButtonClick("Next");
 		}
 
 	}
 
 	public void nonElementLeasedUnits() {
-//		
-//		CommonFunctionUtils.radioButtonSelect("yes", "Do you want to create a list of lessors?");
-//		CommonFunctionUtils.addTextToTheInputField("Name", "Lessor1");
-//		CommonFunctionUtils.addTextToTheInputField("Address", "1234 Elm Street");
-//		CommonFunctionUtils.addTextToTheInputField("City", "Dallas city");
-//		CommonFunctionUtils.selectItemFromDropdown("State", "AZ");
-//		CommonFunctionUtils.addTextToTheInputField("Zip Code", "75201");
-//		CommonFunctionUtils.radioButtonSelect("yes", "Do you want to create a list of loss payees?");
-//		CommonFunctionUtils.addTextToTheInputField("Name", "LoasssPayee1");
-//		CommonFunctionUtils.addTextToTheInputField("Address", "1234 Elm Street");
-//		CommonFunctionUtils.addTextToTheInputField("City", "Dallas city");
-//		CommonFunctionUtils.selectItemFromDropdown("State", "AZ");
-//		CommonFunctionUtils.addTextToTheInputField("Zip Code", "75201");
-
-		// CommonFunctionUtils.radioButtonSelect("yes", "Do you want to add more than 5
-		// Non-Element leased Units?");
-		CommonFunctionUtils.radioButtonSelect("yes", "Do you want to add more than 5 Non-Element leased Units?");
-		CommonFunctionUtils.activeButtonClick("Next");
-//		CommonFunctionUtils.addTextToTheInputField("Unit Number", "Unit-123");
-//		CommonFunctionUtils.addTextToTheInputField("Year", "2025");
-//		CommonFunctionUtils.addTextToTheInputField("Make", "Ford");
-//		CommonFunctionUtils.addTextToTheInputField("Model", "Transit 250");
-//		CommonFunctionUtils.addTextToTheInputField("VIN #", "1FTBR1C8XRKA12345");
-//		CommonFunctionUtils.selectItemFromDropdown("Gross Vehicle Weight (in lbs)", "14,001 – 16,000 lbs");
-//		CommonFunctionUtils.selectItemFromDropdown("Vehicle Type", "Heavy Trucks");
-//		CommonFunctionUtils.addTextToTheInputField("License Plate Number", "TXL-8923");
-//		CommonFunctionUtils.selectItemFromDropdown("State of License Registration", "AL");
-//		CommonFunctionUtils.selectItemFromDropdown("Deductible (in USD)", "1000");
-//		CommonFunctionUtils.radioButtonSelect("No", "Do you intend to use this unit for less than 30 days?");
-//		CommonFunctionUtils.addTextToTheInputField("Address", "1234 Elm Street");
-//		CommonFunctionUtils.addTextToTheInputField("City", "Dallas city");
-//		CommonFunctionUtils.selectItemFromDropdown("State", "AZ");
-//		CommonFunctionUtils.addTextToTheInputField("Zip Code", "75201");
-//		CommonFunctionUtils.addTextToTheInputField("ACV (Actual Cost Value) (in USD)", "4000");
-//		CommonFunctionUtils.radioButtonSelect("no", "Is there an Additional Upfitting component?");
-//		CommonFunctionUtils.checkBoxClick("Loss Payee");
-//		CommonFunctionUtils.checkBoxClick("Lessor");
+		try {
+			CommonFunctionUtils.radioButtonSelect("no", "Do you want to add more than 5 Element Leased Equipment?");
+			CommonFunctionUtils.radioButtonSelect("no", "Do you want to add more than 5 Element Leased Equipment?");
+			CommonFunctionUtils.radioButtonSelect("yes", "Do you want to create a list of lessors?");
+			CommonFunctionUtils.addTextToTheInputField("Name", "Lessor1");
+			CommonFunctionUtils.addTextToTheInputField("Address", "1234 Elm Street");
+			CommonFunctionUtils.addTextToTheInputField("City", "Dallas city");
+			CommonFunctionUtils.selectItemFromDropdown("State", "AZ");
+			CommonFunctionUtils.addTextToTheInputField("Zip Code", "75201");
+			CommonFunctionUtils.radioButtonSelect("yes", "Do you want to create a list of loss payees?");
+			CommonFunctionUtils.addTextToTheInputField("Name", "LoasssPayee1");
+			CommonFunctionUtils.addTextToTheInputField("Address", "1234 Elm Street");
+			CommonFunctionUtils.addTextToTheInputField("City", "Dallas city");
+			CommonFunctionUtils.selectItemFromDropdown("State", "AZ");
+			CommonFunctionUtils.addTextToTheInputField("Zip Code", "75201");
+			CommonFunctionUtils.addTextToTheInputField("Year", "2025");
+			CommonFunctionUtils.addTextToTheInputField("Make", "Ford");
+			CommonFunctionUtils.addTextToTheInputField("Model", "Transit 250");
+			CommonFunctionUtils.addTextToTheInputField("VIN #", "1FTBR1C8XRKA12345");
+			CommonFunctionUtils.selectItemFromDropdown("Gross Vehicle Weight (in lbs)", "14,001 – 16,000 lbs");
+			CommonFunctionUtils.selectItemFromDropdown("Vehicle Type", "Heavy Trucks");
+			CommonFunctionUtils.addTextToTheInputField("License Plate Number", "TXL-8923");
+			CommonFunctionUtils.selectItemFromDropdown("State of License Registration", "AL");
+			CommonFunctionUtils.selectItemFromDropdown("Deductible (in USD)", "1000");
+			CommonFunctionUtils.radioButtonSelect("No", "Do you intend to use this unit for less than 30 days?");
+			CommonFunctionUtils.addTextToTheInputField("Address", "1234 Elm Street");
+			CommonFunctionUtils.addTextToTheInputField("City", "Dallas city");
+			CommonFunctionUtils.selectItemFromDropdown("State", "AZ");
+			CommonFunctionUtils.addTextToTheInputField("Zip Code", "75201");
+			CommonFunctionUtils.addTextToTheInputField("ACV (Actual Cost Value) (in USD)", "4000");
+			CommonFunctionUtils.radioButtonSelect("no", "Is there an Additional Upfitting component?");
+			CommonFunctionUtils.checkBoxClick("Loss Payee");
+			CommonFunctionUtils.checkBoxClick("Lessor");
+			CommonFunctionUtils.activeButtonClick("Next");
+		} catch (Exception e) {
+			System.out.println("Non Leased Units Not clickable");
+			CommonFunctionUtils.activeButtonClick("Next");
+		}
 
 	}
 
 	public void nonElementLeasedEquipments() {
 		try {
 			CommonFunctionUtils.radioButtonSelect("no", "Do you want to add more than 5 Non-Element leased Equipment?");
-			//CommonFunctionUtils.radioButtonSelect("no", "Do you want to add more than 5 Non-Element leased Equipment?");
+			// CommonFunctionUtils.radioButtonSelect("no","Do you want to add more than 5
+			// Non-Element leased Equipment?");
 			if (noneqpno.isDisplayed()) {
 				CommonFunctionUtils.addTextToTheInputField("Equipment Number", "Test-123");
 				CommonFunctionUtils.addTextToTheInputField("Year", "2025");
@@ -143,10 +147,9 @@ public class UnitsEquipmentDataGridPage {
 				CommonFunctionUtils.addTextToTheInputField("Zip Code", "75201");
 				CommonFunctionUtils.addTextToTheInputField("Equipment Value", "4000");
 				CommonFunctionUtils.activeButtonClick("Next");
-				CommonFunctionUtils.activeButtonClick("Next");
 			}
 		} catch (Exception e) {
-			CommonFunctionUtils.activeButtonClick("Next");
+			System.out.println("NonLeased Equipment Not clickable");
 			CommonFunctionUtils.activeButtonClick("Next");
 		}
 

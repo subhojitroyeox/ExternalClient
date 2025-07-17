@@ -1,82 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-16T15:34:56 IST" name="Default suite" finished-at="2025-07-16T15:37:24 IST" duration-ms="148692">
+  <suite started-at="2025-07-16T16:47:05 IST" name="Default suite" finished-at="2025-07-16T16:47:45 IST" duration-ms="39736">
     <groups>
     </groups>
-    <test started-at="2025-07-16T15:34:56 IST" name="Default test" finished-at="2025-07-16T15:37:24 IST" duration-ms="148692">
-      <class name="com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest">
-        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest@7a8c8dcf]" started-at="2025-07-16T15:34:39 IST" name="initializebrowser" finished-at="2025-07-16T15:34:56 IST" duration-ms="16630" status="PASS">
+    <test started-at="2025-07-16T16:47:05 IST" name="Default test" finished-at="2025-07-16T16:47:45 IST" duration-ms="39736">
+      <class name="com.eox.externalhdo.elementfleet.tests.CreateProducer">
+        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:com.eox.externalhdo.elementfleet.tests.CreateProducer@7a8c8dcf]" started-at="2025-07-16T16:46:18 IST" name="initializebrowser" finished-at="2025-07-16T16:47:05 IST" duration-ms="47301" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializebrowser -->
-        <test-method is-config="true" signature="loginSetup()[pri:0, instance:com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest@7a8c8dcf]" started-at="2025-07-16T15:34:56 IST" name="loginSetup" finished-at="2025-07-16T15:34:56 IST" duration-ms="515" status="PASS">
+        <test-method is-config="true" signature="loginSetup()[pri:0, instance:com.eox.externalhdo.elementfleet.tests.CreateProducer@7a8c8dcf]" started-at="2025-07-16T16:47:05 IST" name="loginSetup" finished-at="2025-07-16T16:47:07 IST" duration-ms="1771" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginSetup -->
-        <test-method signature="insuranceApplicationSubmission(java.util.HashMap)[pri:0, instance:com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest@7a8c8dcf]" started-at="2025-07-16T15:34:56 IST" name="insuranceApplicationSubmission" data-provider="getData" finished-at="2025-07-16T15:37:24 IST" duration-ms="148088" status="FAIL">
+        <test-method signature="createProducer(java.util.HashMap)[pri:0, instance:com.eox.externalhdo.elementfleet.tests.CreateProducer@7a8c8dcf]" started-at="2025-07-16T16:47:07 IST" name="createProducer" data-provider="getData" finished-at="2025-07-16T16:47:45 IST" duration-ms="37655" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{Company=Joint Venture, Address=NY, loc Zip Code=23451, First Name=TEST, applicant Zip Code=345765, Policy Number=TEST23254, Premium=250,000, fein=456543455, Please describe primary operations=TEST, Tow limit=10,000, Business Phone=4565761234, NAICS=432123, Do operations involve transporting hazardous material?=no, Are you aware of any manufacturer defects?=no, Has there been any mechanical or electrical breakdown of the vehicles?=no, Carrier=Liberty Mutual Fire Insurance Company, Is a formal safety program in operation?=yes, Any vehicles owned but not scheduled on this application?=no, Would you like to add tow coverage?=yes, Has there been any damage due to gradual deterioration or the effects of improper/lack of maintenance?=no, City=NY, Any policy or coverage declined, cancelled=yes, SIC=6361-32, In what radius do the majority of your vehicles operate?=0-50, Proposed Effective date=07-08-2025, loc Address=NY, State=NY, Do you require insurance on units and equipment=yes, Contact First Name=Test, Contact Last Name=Test, MC Number=TEST123456, Relationship Description=TEST, Last Name=TEST, Any hold harmless agreements?=no, Mobile Phone=2143254652, Email Address=support@eoxvantage.com, Expiration Date=07-08-2026, Are you a subsidiary of another entity?=yes, Do over 50% of the employees use their autos in the business?=no, Are any vehicles leased to others?=no, DOT Number=432343234324, Broker Name=TEST, Percentage of Ownership2=100%, Percentage of Ownership1=80, Does applicant have other business ventures for which coverage is not requested?=yes, loc City=NY, Reason=Non-Payment, Are any non-licensed drivers allowed to operate the vehicles?=no, Any vehicles used by family members? If so, identify=no, What is the Use for the majority of your vehicles?=Service, Role Type=Accounting, Effective Date=07-08-2025, Webiste=www.elementfleet.com, Nature of Business=Service, Do you have a dedicated Safety Manager?=yes, Is there any loss of value at repossession?=no, Has there been any damage caused by normal wear and tear on the vehicles?=no, Has there been any blowouts, punctures, or other road damage to tires?=no, Describe other operations for which coverage is not requested=Test, Is there a vehicle maintenance program in operation?=no, Do you obtain MVR (Motor Vehicle Report) verifications?=no, Has there been any loss due to mysterious disappearance or damage caused by a criminal act?=no, Year=2020, Has there been any loss due to conversion, embezzlement, or secretion of the vehicle?=no, Do you have any subsidiaries?=yes, Parent Company Name=TEST, Date Business Started=07-08-2025, Has there been any damage caused by freezing or extreme weather conditions?=no, loc State=NY, Please select your per occurrence Deductible. (in USD)=1000, Address Line 2=NY, Subsidiary Company Name =TEST}]]>
+                <![CDATA[{First Name=Steve, Middle Name=Joe, Email=steve.harrington10@hubinternational.com, Last Name=Harrington, State=California, Role Type=Producer}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (b553c7d62e1297ceb7f10bfe8d65b47f)] -> xpath: //button[contains(text(),'Submit Form')]] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\tejar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61697/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b553c7d62e1297ceb7f10bfe8d65b47f]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (b553c7d62e1297ceb7f10bfe8d65b47f)] -> xpath: //button[contains(text(),'Submit Form')]] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\tejar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61697/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b553c7d62e1297ceb7f10bfe8d65b47f
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.eox.utils.CommonFunctionUtils.activeButtonClick(CommonFunctionUtils.java:56)
-at com.eox.externalhdo.elementfleet.pages.FormSubmitPage.submitForm(FormSubmitPage.java:27)
-at com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest.insuranceApplicationSubmission(InsuranceFormSubmissionTest.java:24)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- insuranceApplicationSubmission -->
-      </class> <!-- com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest -->
+        </test-method> <!-- createProducer -->
+      </class> <!-- com.eox.externalhdo.elementfleet.tests.CreateProducer -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

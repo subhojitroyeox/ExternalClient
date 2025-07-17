@@ -9,47 +9,10 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">148,692</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">39,736</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest</td><td><a href="#m0">insuranceApplicationSubmission</a></td><td rowspan="1">1752660296699</td><td rowspan="1">148088</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">com.eox.externalhdo.elementfleet.tests.CreateProducer</td><td><a href="#m0">createProducer</a></td><td rowspan="1">1752664627871</td><td rowspan="1">37655</td></tr></tbody>
 </table>
-<h2>Default test</h2><h3 id="m0">com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest#insuranceApplicationSubmission</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{Company=Joint Venture, Address=NY, loc Zip Code=23451, First Name=TEST, applicant Zip Code=345765, Policy Number=TEST23254, Premium=250,000, fein=456543455, Please describe primary operations=TEST, Tow limit=10,000, Business Phone=4565761234, NAICS=432123, Do operations involve transporting hazardous material?=no, Are you aware of any manufacturer defects?=no, Has there been any mechanical or electrical breakdown of the vehicles?=no, Carrier=Liberty Mutual Fire Insurance Company, Is a formal safety program in operation?=yes, Any vehicles owned but not scheduled on this application?=no, Would you like to add tow coverage?=yes, Has there been any damage due to gradual deterioration or the effects of improper/lack of maintenance?=no, City=NY, Any policy or coverage declined, cancelled=yes, SIC=6361-32, In what radius do the majority of your vehicles operate?=0-50, Proposed Effective date=07-08-2025, loc Address=NY, State=NY, Do you require insurance on units and equipment=yes, Contact First Name=Test, Contact Last Name=Test, MC Number=TEST123456, Relationship Description=TEST, Last Name=TEST, Any hold harmless agreements?=no, Mobile Phone=2143254652, Email Address=support@eoxvantage.com, Expiration Date=07-08-2026, Are you a subsidiary of another entity?=yes, Do over 50% of the employees use their autos in the business?=no, Are any vehicles leased to others?=no, DOT Number=432343234324, Broker Name=TEST, Percentage of Ownership2=100%, Percentage of Ownership1=80, Does applicant have other business ventures for which coverage is not requested?=yes, loc City=NY, Reason=Non-Payment, Are any non-licensed drivers allowed to operate the vehicles?=no, Any vehicles used by family members? If so, identify=no, What is the Use for the majority of your vehicles?=Service, Role Type=Accounting, Effective Date=07-08-2025, Webiste=www.elementfleet.com, Nature of Business=Service, Do you have a dedicated Safety Manager?=yes, Is there any loss of value at repossession?=no, Has there been any damage caused by normal wear and tear on the vehicles?=no, Has there been any blowouts, punctures, or other road damage to tires?=no, Describe other operations for which coverage is not requested=Test, Is there a vehicle maintenance program in operation?=no, Do you obtain MVR (Motor Vehicle Report) verifications?=no, Has there been any loss due to mysterious disappearance or damage caused by a criminal act?=no, Year=2020, Has there been any loss due to conversion, embezzlement, or secretion of the vehicle?=no, Do you have any subsidiaries?=yes, Parent Company Name=TEST, Date Business Started=07-08-2025, Has there been any damage caused by freezing or extreme weather conditions?=no, loc State=NY, Please select your per occurrence Deductible. (in USD)=1000, Address Line 2=NY, Subsidiary Company Name =TEST}</td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on windows (b553c7d62e1297ceb7f10bfe8d65b47f)] -&gt; xpath: //button[contains(text(),&apos;Submit Form&apos;)]] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: &apos;4.34.0&apos;, revision: &apos;707dcb4246*&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;21.0.7&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\tejar\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:61697}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:61697/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b553c7d62e1297ceb7f10bfe8d65b47f
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-	at com.eox.utils.CommonFunctionUtils.activeButtonClick(CommonFunctionUtils.java:56)
-	at com.eox.externalhdo.elementfleet.pages.FormSubmitPage.submitForm(FormSubmitPage.java:27)
-	at com.eox.externalhdo.elementfleet.test.InsuranceFormSubmissionTest.insuranceApplicationSubmission(InsuranceFormSubmissionTest.java:24)
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-	at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-	at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-	at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-	at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-	at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-	at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at org.testng.TestRunner.privateRun(TestRunner.java:741)
-	at org.testng.TestRunner.run(TestRunner.java:616)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-	at org.testng.TestNG.runSuites(TestNG.java:1112)
-	at org.testng.TestNG.run(TestNG.java:1079)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Default test</h2><h3 id="m0">com.eox.externalhdo.elementfleet.tests.CreateProducer#createProducer</h3><table class="result"><tr class="param"><th>Parameter #1</th></tr><tr class="param stripe"><td>{First Name=Steve, Middle Name=Joe, Email=steve.harrington10@hubinternational.com, Last Name=Harrington, State=California, Role Type=Producer}</td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

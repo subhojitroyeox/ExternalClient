@@ -68,8 +68,8 @@ public class Basetest {
 
 	@BeforeTest
 	public static void loginSetup() {
-		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("clientadminusername"),
-		SupportUtils.getProperty("clientadminpassword"),null);
+		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("elementusername"),
+		SupportUtils.getProperty("elementpassword"),null);
 //		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("hubadminusername"),
 //		SupportUtils.getProperty("hubadminpassword"));
 //		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("clientadminusername"),

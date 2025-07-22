@@ -17,10 +17,10 @@ public class InsuranceFormSubmissionTest extends Basetest {
 		insurancepage.welcomeTab();
 		insurancepage.ApplicationTab(input);
 		insurancepage.insuranceandApplicantInformationTab(input);
-		unitsequipmentDatagrid.elementLeasedUnits();
-		unitsequipmentDatagrid.elementLeasedEquipment();
-		unitsequipmentDatagrid.nonElementLeasedUnits();
-		unitsequipmentDatagrid.nonElementLeasedEquipments();
+		unitsequipmentDatagrid.elementLeasedUnits(input);
+		unitsequipmentDatagrid.elementLeasedEquipment(input);
+		unitsequipmentDatagrid.nonElementLeasedUnits(input);
+		unitsequipmentDatagrid.nonElementLeasedEquipments(input);
 		formSubmit.submitForm();
 
 	}

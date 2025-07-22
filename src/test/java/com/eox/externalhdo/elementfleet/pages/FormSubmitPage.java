@@ -22,11 +22,11 @@ public class FormSubmitPage extends ExternalUtils {
 		CommonFunctionUtils.waitForClickableElement(driver.findElement(By.xpath("//button[text()='Submit Form']")));
 		try {
 			CommonFunctionUtils.activeButtonClick("Submit Form");
-			CommonFunctionUtils.activeButtonClick("Ok");
+			CommonFunctionUtils.activeButtonClick("OK");
 		} catch (Exception e) {
 			System.out.println("Date exception occured");
 			CommonFunctionUtils.activeButtonClick("Submit Form");
-			CommonFunctionUtils.activeButtonClick("Ok");
+			CommonFunctionUtils.activeButtonClick("OK");
 		}
 
 	}

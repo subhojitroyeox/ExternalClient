@@ -34,10 +34,10 @@ public class InsuranceFormPage extends ExternalUtils {
 	}
 
 	public void ApplicationTab(HashMap<String, String> input) {
-		CommonFunctionUtils.waitForSpinnerGoesOff();
 //		esignPdf("HUB Drive Online Privacy Notice-US.pdf", "Click to sign the document");
 //		esignPdf("HUB Drive Online Terms and Conditions US.pdf", "Click to sign the document");
 //		esignPdf("HUB Drive Online EULA US.pdf", "Click to sign the document");
+		CommonFunctionUtils.waitForSpinnerGoesOff();
 		CommonFunctionUtils
 				.checkBoxClick("I have read the HDOL Privacy Policy. I agree with the terms and conditions.");
 		CommonFunctionUtils.checkBoxClick("I have read and agree to the HDOL terms and conditions.");

@@ -27,6 +27,8 @@ import com.eox.externalhdo.amazon.pages.UnitsandLaborPage;
 import com.eox.externalhdo.amazon.pages.WelcomeandAcknowledgementPage;
 import com.eox.externalhdo.elementfleet.hdolutils.ExternalUtils;
 import com.eox.utils.CommonFunctionUtils;
+import com.eox.utils.FTNIPayment;
+import com.eox.utils.LoginUtils;
 import com.eox.utils.SupportUtils;
 import com.eox.utils.WebDriverUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -49,6 +51,11 @@ public class Basetest {
 	public static ManCheckOpearionsPage fourth;
 	public static ManCheckUnitsLaborPage fifth;
 	public static ManCheckHiredAutosPage sixth;
+	public static LoginUtils loginUtils;
+	public static FTNIPayment fTNIPayment;
+	private static String web_URL = SupportUtils.getProperty("hdoStage");
+	private static String userID = SupportUtils.getProperty("Hdo_username");
+	private static String password = SupportUtils.getProperty("Hdo_password");
 
 	@BeforeSuite
 	public static void initializebrowser() {
@@ -68,12 +75,13 @@ public class Basetest {
 		attach = new AttachmentsPage(driver);
 		aznutils = new ExternalUtils(driver);
 		mand = new MyCompanyDetailsMandatoryPage(driver);
+		loginUtils = new LoginUtils(driver, web_URL, userID, password);
+		fTNIPayment = new FTNIPayment(driver);
 	}
 
 	@BeforeClass
 	public static void loginSetup() {
-		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("dspUsername"),
-				SupportUtils.getProperty("dspPassword"));
+		LoginUtils.loginToApplication("HDO");
 	}
 
 	// @AfterSuite

@@ -2,11 +2,10 @@
   "roles": {
     "Admin": [
       "Insurance",
-      "USER MANAGEMENT",
+	  "USER MANAGEMENT",
       "Invoice and Payables"
     ],
-    "User": [
-      "Insurance",
+    "Accounting": [
        "Invoice and Payables"
     ],
 	"Producer":[
@@ -27,6 +26,13 @@
 	[
 		"Insurance",
 		"Invoice and Payables"
+	],
+	"HUB Overall Admin":
+	[
+		"Insurance",
+		"Invoice and Payables",
+		"Element Fleet UM"
+		
 	]
 	}
 }

@@ -1,4 +1,4 @@
-package com.eox.externalhdo.elementfleet.test;
+package com.eox.externalhdo.elementfleet.tests;
 
 import org.testng.annotations.Test;
 

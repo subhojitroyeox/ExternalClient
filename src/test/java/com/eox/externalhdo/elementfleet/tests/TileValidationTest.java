@@ -1,4 +1,4 @@
-package com.eox.externalhdo.elementfleet.test;
+package com.eox.externalhdo.elementfleet.tests;
 
 import static org.testng.Assert.assertTrue;
 
@@ -14,6 +14,7 @@ import com.eox.utils.HDOUtils;
 
 public class TileValidationTest extends Basetest {
 	@Test
+	
 	public void clientadminTilevalidation() {
 		boolean result = tilevalidate.tileaccesscheck();
 		assertTrue(result);

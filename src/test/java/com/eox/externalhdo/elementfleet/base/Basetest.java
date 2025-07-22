@@ -5,27 +5,31 @@ import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.List;
-
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterSuite;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import com.eox.externalhdo.elementfleet.pages.UserManagementClientAdminPage;
 import com.eox.externalhdo.elementfleet.pages.UserManagementEditPage;
 import com.eox.externalhdo.elementfleet.hdolutils.ExternalUtils;
+import com.eox.externalhdo.elementfleet.pages.Clientadmingethelpandsubmitpage;
+import com.eox.externalhdo.elementfleet.pages.Clientadminsaveandclosepage;
 import com.eox.externalhdo.elementfleet.pages.EditApplicationPage;
 import com.eox.externalhdo.elementfleet.pages.FormSubmitPage;
 import com.eox.externalhdo.elementfleet.pages.InsuranceFormPage;
-import com.eox.externalhdo.elementfleet.pages.ReferralConditionPage;
+import com.eox.externalhdo.elementfleet.pages.PaymentPage;
+import com.eox.externalhdo.elementfleet.pages.Producerquotepublishpage;
+import com.eox.externalhdo.elementfleet.pages.Producersendapplicationpage;
+import com.eox.externalhdo.elementfleet.pages.SendApplicationPage;
 import com.eox.externalhdo.elementfleet.pages.TileAccessValidationPage;
 import com.eox.externalhdo.elementfleet.pages.UnitsEquipmentDataGridPage;
 import com.eox.externalhdo.elementfleet.pages.UserManagementPage;
-import com.eox.externalhdo.elementfleet.hdolutils.ElementUtils;
+import com.eox.externalhdo.elementfleet.pages.clientadmincancelpage;
+import com.eox.externalhdo.elementfleet.pages.producerquoteacceptpage;
 import com.eox.utils.CommonFunctionUtils;
+import com.eox.utils.FTNIPayment;
 import com.eox.utils.HDOUtils;
+import com.eox.utils.LoginUtils;
 import com.eox.utils.SupportUtils;
 import com.eox.utils.WebDriverUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -36,16 +40,31 @@ public class Basetest {
 	public static CommonFunctionUtils cu;
 	public static UserManagementPage userManagementPage;
 	public static UserManagementClientAdminPage userManagementClientAdminPage;
-	public static UserManagementEditPage userManagementEditPage ;
+	public static UserManagementEditPage userManagementEditPage;
 	public static UserManagementPage UmPage;
 	public static ExternalUtils utils;
-	public static ReferralConditionPage referralpage;
 	public static InsuranceFormPage insurancepage;
 	public static UnitsEquipmentDataGridPage unitsequipmentDatagrid;
 	public static FormSubmitPage formSubmit;
 	public static TileAccessValidationPage tilevalidate;
 	public static EditApplicationPage editpage;
 	public static HDOUtils hdoutils;
+	public static PaymentPage payment;
+	public static SendApplicationPage referralCheck;
+	public static LoginUtils loginUtils;
+	public static FTNIPayment fTNIPayment;
+//	From thimmesh 
+	public static Producersendapplicationpage sendapp;
+	public static Producerquotepublishpage  publishquote;
+	public static producerquoteacceptpage quoteaccepted;
+	public static Clientadmingethelpandsubmitpage gethelpandsubmit;
+	public static Clientadminsaveandclosepage saveandclose;
+	public static clientadmincancelpage cancel;
+	
+//	String variable 
+	private static String web_URL = "https://hdoustest.eoxvantage.com/#login";
+	private static String userID = SupportUtils.getProperty("clientadminusername");
+	private static String password = SupportUtils.getProperty("clientadminpassword");
 
 	@BeforeSuite
 	public static void initializebrowser() {
@@ -56,29 +75,34 @@ public class Basetest {
 		userManagementClientAdminPage = new UserManagementClientAdminPage(driver);
 		userManagementEditPage = new UserManagementEditPage(driver);
 		UmPage = new UserManagementPage(driver);
-		referralpage = new ReferralConditionPage(driver);
 		insurancepage = new InsuranceFormPage(driver);
 		unitsequipmentDatagrid = new UnitsEquipmentDataGridPage(driver);
 		formSubmit = new FormSubmitPage(driver);
 		tilevalidate = new TileAccessValidationPage(driver);
 		editpage = new EditApplicationPage(driver);
 		hdoutils = new HDOUtils(driver);
+		payment = new PaymentPage(driver);
+		referralCheck = new SendApplicationPage(driver);
+		loginUtils = new LoginUtils(driver, web_URL, userID, password);
+		fTNIPayment = new FTNIPayment(driver);
+//		From thimmesh 
+		sendapp = new Producersendapplicationpage(driver);
+		publishquote = new Producerquotepublishpage(driver);
+		quoteaccepted = new producerquoteacceptpage(driver);
+		gethelpandsubmit = new Clientadmingethelpandsubmitpage(driver);
+		saveandclose = new Clientadminsaveandclosepage(driver);
+		cancel = new clientadmincancelpage(driver);
 
 	}
 
 	@BeforeTest
 	public static void loginSetup() {
-		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("elementusername"),
-		SupportUtils.getProperty("elementpassword"),null);
-//		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("hubadminusername"),
-//		SupportUtils.getProperty("hubadminpassword"));
-//		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("clientadminusername"),
-//		SupportUtils.getProperty("clientadminpassword"));
+		LoginUtils.loginToApplication("HDO");
 	}
-//	 @AfterTest
-//	public static void terminate()
-//	{
-//		 driver.close();
+
+//	@AfterTest
+//	public static void terminate() {
+//		driver.close();
 //	}
 
 	// @AfterSuite
@@ -89,7 +113,7 @@ public class Basetest {
 	public List<HashMap<String, String>> getJsonDataToMap(String filepath) throws IOException {
 		// read json to string
 		String jsonContent = FileUtils.readFileToString(new File(filepath), StandardCharsets.UTF_8);
-		// String to Json using Jackson databind
+		// String to Hashmap using Jackson databind
 		ObjectMapper mapper = new ObjectMapper();
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
 				new TypeReference<List<HashMap<String, String>>>() {

@@ -1,7 +1,6 @@
-package com.eox.externalhdo.elementfleet.test;
+package com.eox.externalhdo.elementfleet.tests;
 
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
@@ -10,29 +9,25 @@ import org.testng.annotations.Test;
 
 import com.eox.externalhdo.elementfleet.base.Basetest;
 
-public class ReferralConditionTest extends Basetest {
+public class InsuranceFormExcelUpload extends Basetest {
 
 	@Test(dataProvider = "getData")
-	public void clientAdminSubmit(HashMap<String, String> input) throws InterruptedException {
+	public void excelUpload(HashMap<String, String> input) throws InterruptedException {
 		insurancepage.welcomeTab();
 		insurancepage.ApplicationTab(input);
 		insurancepage.insuranceandApplicantInformationTab(input);
-		unitsequipmentDatagrid.elementLeasedUnits(input);
-		unitsequipmentDatagrid.elementLeasedEquipment(input);
-		unitsequipmentDatagrid.nonElementLeasedUnits(input);
-		unitsequipmentDatagrid.nonElementLeasedEquipments(input);
+		unitsequipmentDatagrid.LeasedUnitsExcelupload();
+		unitsequipmentDatagrid.LeasedEquipmentExcelupload();
+		unitsequipmentDatagrid.NonLeasedUnitExcelupload();
+		unitsequipmentDatagrid.NonLeasedEquipmentExcelupload();
 		formSubmit.submitForm();
 
 	}
 
-	@Test
-	public void referraltest() {
-		}
-
 	@DataProvider
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = getJsonDataToMap(
-				System.getProperty("user.dir") + "//src//test//java//data//Referral.json");
+				System.getProperty("user.dir") + "//src//test//java//data//InsuranceForm.json");
 		return new Object[][] { { data.get(0) } };
 	};
 

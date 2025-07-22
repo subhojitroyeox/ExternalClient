@@ -20,9 +20,6 @@ public class UserManagementEditPage
         PageFactory.initElements(driver, this);
     }
 
-//    @FindBy(xpath = "//a[@page-id='6e358417-2b71-4f4f-8640-ded07d4a1267']")
-//    WebElement tileclick;
-
     public void umPage(String emailId) throws InterruptedException 
     {
         CommonFunctionUtils.waitForSpinnerGoesOff();

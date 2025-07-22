@@ -1,42 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-07-22T23:20:23 IST" name="Default suite" finished-at="2025-07-22T23:22:06 IST" duration-ms="103076">
-    <groups>
-    </groups>
-    <test started-at="2025-07-22T23:20:23 IST" name="Default test" finished-at="2025-07-22T23:22:06 IST" duration-ms="103076">
-      <class name="com.eox.externalhdo.elementfleet.tests.EF_E2ETest">
-        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:20:02 IST" name="initializebrowser" finished-at="2025-07-22T23:20:23 IST" duration-ms="21414" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- initializebrowser -->
-        <test-method is-config="true" signature="loginSetup()[pri:0, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:20:23 IST" name="loginSetup" finished-at="2025-07-22T23:20:24 IST" duration-ms="445" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- loginSetup -->
-        <test-method signature="insuranceApplicationSubmission(java.util.HashMap)[pri:2, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:20:24 IST" name="insuranceApplicationSubmission" data-provider="getData" finished-at="2025-07-22T23:21:01 IST" duration-ms="37389" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[{leased_unit_Cap Cost (Original cost + Upfit value)(in USD)=43500, leased_unit_Lease Term (in Months)=25, Address=NY, loc Zip Code=23451, Policy Number=TEST23254, Premium=250,000, fein=456543455, non_leased_units_ACV (Actual Cost Value) (in USD)=4, Tow limit=10,000, Business Phone=4565761234, Do operations involve transporting hazardous material?=no, Are you aware of any manufacturer defects?=no, non_leased_units_City=Dallas city, leased_equipment_Serial Number=CAT0320GCLX123456, leased_unit_Zip Code=75201, Is a formal safety program in operation?=yes, leased_unit_Deductible (in USD)=1000, Any vehicles owned but not scheduled on this application?=no, non_leased_units_Year=2025, leased_equipment_Make=Caterpillar, non_leased_units_Gross Vehicle Weight (in lbs)=14,001 – 16,000 lbs, non_leased_equipments_Model=320 GC Hydraulic Excavator, Any policy or coverage declined, cancelled=yes, non_leased_equipments_Deductible (in USD)=1000, In what radius do the majority of your vehicles operate?=0-50, loc Address=NY, Do you require insurance on units and equipment=yes, Contact First Name=Test, Contact Last Name=Test, MC Number=TEST123456, non_leased_equipments_Year=2025, non_leased_equipments_Equipment Value=4, Last Name=TEST, leased_equipment_Zip Code=75201, leased_unit_Make=Ford, Are you a subsidiary of another entity?=yes, Are any vehicles leased to others?=no, loss_payee_Zip Code=75201, DOT Number=432343234324, leased_unit_VIN #=1FTBR1C8XRKA12345, Percentage of Ownership2=, Percentage of Ownership1=, leased_equipment_Category=Lifts, Does applicant have other business ventures for which coverage is not requested?=yes, leased_equipment_Equipment Number=Test-123, What is the Use for the majority of your vehicles?=Service, Role Type=Accounting, non_leased_units_Zip Code=75201, lessor_State=AZ, non_leased_units_License Plate Number=TXL-8923, Webiste=www.elementfleet.com, Nature of Business=Service, Do you have a dedicated Safety Manager?=yes, Is there any loss of value at repossession?=no, Has there been any blowouts, punctures, or other road damage to tires?=no, Describe other operations for which coverage is not requested=Test, Is there a vehicle maintenance program in operation?=no, non_leased_equipments_Make=Caterpillar, non_leased_equipments_Zip Code=75201, loss_payee_Address=1234 Elm Street, non_leased_units_Vehicle Type=Heavy Trucks, non_leased_units_Make=Ford, non_leased_units_State of License Registration=AL, leased_unit_State=AZ, non_leased_units_Address=1234 Elm Street, Has there been any loss due to mysterious disappearance or damage caused by a criminal act?=no, Year=2020, Has there been any loss due to conversion, embezzlement, or secretion of the vehicle?=no, non_leased_equipments_State=AZ, Do you have any subsidiaries?=yes, Parent Company Name=TEST, loc State=NY, Please select your per occurrence Deductible. (in USD)=1000, Subsidiary Company Name =TEST, loss_payee_State=AZ, leased_unit_Model=Transit 250, leased_equipment_Address=1234 Elm Street, non_leased_equipments_Address=1234 Elm Street, Company=Joint Venture, leased_unit_Lease Start Date=07/13/2025, First Name=TEST, non_leased_units_VIN #=1FTBR1C8XRKA12345, applicant Zip Code=345765, leased_unit_Gross Vehicle Weight (in lbs)=14,001 – 16,000 lbs, leased_unit_State of License Registration=AL, Please describe primary operations=TEST, leased_equipment_Vehicle Type=Forklifts, NAICS=432123, Do you want to create a list of loss payees?=yes, loss_payee_Name=LoasssPayee1, non_leased_units_Is there an Additional Upfitting component?=no, leased_unit_Unit Number=Unit-123, non_leased_units_Do you intend to use this unit for less than 30 days?=No, Has there been any mechanical or electrical breakdown of the vehicles?=no, Carrier=Liberty Mutual Fire Insurance Company, leased_equipment_Year=2025, leased_equipment_Deductible (in USD)=1000, leased_equipment_State=AZ, non_leased_equipments_Is this a Pool Vehicle?=no, Would you like to add tow coverage?=yes, non_leased_equipments_Equipment Number=Test-123, non_leased_equipments_Vehicle Type=Forklifts, Has there been any damage due to gradual deterioration or the effects of improper/lack of maintenance?=no, City=NY, SIC=6361-32, lessor_Address=1234 Elm Street, Do you want to add more than 5 Element Leased Equipment?=no, leased_equipment_Equipment Value=4000, Do you want to add more than 5 Element Leased Units?=no, Proposed Effective date=07-08-2025, State=NY, leased_unit_Is this a Pool Vehicle?=no, Relationship Description=TEST, Any hold harmless agreements?=no, non_leased_equipments_Serial Number=CAT0320GCLX123456, Mobile Phone=2143254652, lessor_City=Dallas city, Email Address=, leased_equipment_City=Dallas city, Expiration Date=07-08-2026, non_leased_units_Model=Transit 250, leased_unit_City=Dallas city, Do over 50% of the employees use their autos in the business?=no, Broker Name=TEST, leased_unit_Vehicle Type=Heavy Trucks, loc City=NY, Reason=Non-Payment, leased_equipment_Lease Start Date=07/13/2022, Are any non-licensed drivers allowed to operate the vehicles?=no, non_leased_units_State=AZ, Any vehicles used by family members? If so, identify=no, Effective Date=07-08-2025, Do you want to add more than 5 Non-Element leased Equipment?=no, lessor_Name=Lessor1, non_leased_equipments_Category=Lifts, non_leased_equipments_City=Dallas city, Has there been any damage caused by normal wear and tear on the vehicles?=no, non_leased_units_Deductible (in USD)=1000, Do you obtain MVR (Motor Vehicle Report) verifications?=no, Do you want to create a list of lessors?=yes, leased_unit_License Plate Number=TXL-8923, leased_unit_Do you intend to use this unit for less than 30 days?=no, leased_unit_Address=1234 Elm Street, loss_payee_City=Dallas city, leased_equipment_Model=320 GC Hydraulic Excavator, lessor_Zip Code=75201, leased_unit_Year=2025, leased_equipment_Lease Term=25, Date Business Started=07-08-2025, Has there been any damage caused by freezing or extreme weather conditions?=no, Address Line 2=NY}]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] "}
+<!-- Generated by org.testng.reporters.JUnitReportReporter -->
+<testsuite hostname="EOXVAINDLT922" failures="0" tests="4" name="com.eox.externalhdo.elementfleet.tests.EF_E2ETest" time="102.335" errors="3" timestamp="2025-07-22T23:22:07 IST" skipped="0">
+  <testcase classname="com.eox.externalhdo.elementfleet.tests.EF_E2ETest" name="insuranceApplicationSubmission" time="37.389">
+    <error message="no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[contains(text(),&#039;Do you require insurance on units and equipment other than the Element-Leased units and equipment?&#039;)]/following::input[contains(@id,&#039;yes&#039;)and @type=&#039;radio&#039;] &quot;}
   (Session info: chrome=138.0.7204.101)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Build info: version: &#039;4.34.0&#039;, revision: &#039;707dcb4246*&#039;
+System info: os.name: &#039;Windows 11&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;21.0.6&#039;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f9115af03212cb9248cda0b7f1a7f9d6, findElement {using=xpath, value=//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] }]
+Command: [f9115af03212cb9248cda0b7f1a7f9d6, findElement {using=xpath, value=//*[contains(text(),&#039;Do you require insurance on units and equipment other than the Element-Leased units and equipment?&#039;)]/following::input[contains(@id,&#039;yes&#039;)and @type=&#039;radio&#039;] }]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] "}
+Session ID: f9115af03212cb9248cda0b7f1a7f9d6" type="org.openqa.selenium.NoSuchElementException">
+      <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] "}
   (Session info: chrome=138.0.7204.101)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
@@ -89,27 +64,17 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- insuranceApplicationSubmission -->
-        <test-method signature="producerSendapplication()[pri:3, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:21:01 IST" name="producerSendapplication" finished-at="2025-07-22T23:21:34 IST" duration-ms="32288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- producerSendapplication -->
-        <test-method signature="publishQuotetest()[pri:4, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:21:34 IST" name="publishQuotetest" finished-at="2025-07-22T23:21:54 IST" duration-ms="20369" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for invisibility of [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //div[@class='spinner']] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+    </error>
+  </testcase> <!-- insuranceApplicationSubmission -->
+  <testcase classname="com.eox.externalhdo.elementfleet.tests.EF_E2ETest" name="producerSendapplication" time="32.288"/>
+  <testcase classname="com.eox.externalhdo.elementfleet.tests.EF_E2ETest" name="publishQuotetest" time="20.369">
+    <error message="Expected condition failed: waiting for invisibility of [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -&gt; xpath: //div[@class=&#039;spinner&#039;]] (tried for 10 second(s) with 500 milliseconds interval)
+Build info: version: &#039;4.34.0&#039;, revision: &#039;707dcb4246*&#039;
+System info: os.name: &#039;Windows 11&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;21.0.6&#039;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //div[@class='spinner']] (tried for 10 second(s) with 500 milliseconds interval)
+Session ID: f9115af03212cb9248cda0b7f1a7f9d6" type="org.openqa.selenium.TimeoutException">
+      <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //div[@class='spinner']] (tried for 10 second(s) with 500 milliseconds interval)
 Build info: version: '4.34.0', revision: '707dcb4246*'
 System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
@@ -147,27 +112,20 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- publishQuotetest -->
-        <test-method signature="quoteAccept()[pri:5, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:21:54 IST" name="quoteAccept" finished-at="2025-07-22T23:22:06 IST" duration-ms="12289" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found in the current frame
+    </error>
+  </testcase> <!-- publishQuotetest -->
+  <testcase classname="com.eox.externalhdo.elementfleet.tests.EF_E2ETest" name="quoteAccept" time="12.289">
+    <error message="stale element reference: stale element not found in the current frame
   (Session info: chrome=138.0.7204.101)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
+Build info: version: &#039;4.34.0&#039;, revision: &#039;707dcb4246*&#039;
+System info: os.name: &#039;Windows 11&#039;, os.arch: &#039;amd64&#039;, os.version: &#039;10.0&#039;, java.version: &#039;21.0.6&#039;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
 Command: [f9115af03212cb9248cda0b7f1a7f9d6, isElementDisplayed {id=f.5765B6148698C01C69C869F66BC65EA7.d.59B4C598CF32F4D7697FE9D3803C736B.e.306}]
 Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //a[contains(@title,'Insurance') and contains(normalize-space(), 'Quotes')]]
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
+Element: [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -&gt; xpath: //a[contains(@title,&#039;Insurance&#039;) and contains(normalize-space(), &#039;Quotes&#039;)]]
+Session ID: f9115af03212cb9248cda0b7f1a7f9d6" type="org.openqa.selenium.StaleElementReferenceException">
+      <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
   (Session info: chrome=138.0.7204.101)
 For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
 Build info: version: '4.34.0', revision: '707dcb4246*'
@@ -226,12 +184,6 @@ at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quoteAccept -->
-      </class> <!-- com.eox.externalhdo.elementfleet.tests.EF_E2ETest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
-</testng-results>
+    </error>
+  </testcase> <!-- quoteAccept -->
+</testsuite> <!-- com.eox.externalhdo.elementfleet.tests.EF_E2ETest -->

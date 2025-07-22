@@ -3,13 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.eox.externalhdo.elementfleet.tests.CreateProducer">
+      <class name="com.eox.externalhdo.elementfleet.tests.EF_E2ETest">
         <methods>
+          <include name="quoteAccept"/>
           <include name="loginSetup"/>
-          <include name="createProducer" invocation-numbers="0"/>
+          <include name="publishQuotetest"/>
           <include name="initializebrowser"/>
+          <include name="insuranceApplicationSubmission" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.eox.externalhdo.elementfleet.tests.CreateProducer -->
+      </class> <!-- com.eox.externalhdo.elementfleet.tests.EF_E2ETest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

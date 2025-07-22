@@ -34,7 +34,6 @@ public class UserManagementPage {
         CommonFunctionUtils.addEmailToTheInputField("Email", input.get("Email"));
         CommonFunctionUtils.selectItemFromDropdown("State", input.get("State"));
         CommonFunctionUtils.activeButtonClick("Submit");
-      //  CommonFunctionUtils.activeButtonClick("OK");
 
         WebElement popupMessage = driver.findElement(By.xpath("//tr[@class='text-success']/td[1]"));
         CommonFunctionUtils.waitForVisibility(popupMessage);

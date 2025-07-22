@@ -1,15 +1,8 @@
 package com.eox.externalhdo.elementfleet.pages;
 
 import java.util.HashMap;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-
-import com.eox.externalhdo.elementfleet.hdolutils.ElementUtils;
 import com.eox.externalhdo.elementfleet.hdolutils.ExternalUtils;
 import com.eox.utils.CommonFunctionUtils;
 
@@ -19,12 +12,11 @@ public class InsuranceFormPage extends ExternalUtils {
 	public InsuranceFormPage(WebDriver driver) {
 		super(driver);
 		InsuranceFormPage.driver = driver;
-		PageFactory.initElements(driver, this);
 	}
 
 	public void welcomeTab() {
-		driver.findElement(By.xpath("//i[@class='fa fa-refresh']//parent::button[@class='btn btn-primary']")).click();
-		driver.findElement(By.xpath("//a[@page-id='cfdf0029-ad61-4eae-b18a-ad27eef968d5']")).click();
+		CommonFunctionUtils.elementClick(driver.findElement(By.xpath("//i[@class='fa fa-refresh']//parent::button[@class='btn btn-primary']")));
+		CommonFunctionUtils.elementClick(driver.findElement(By.xpath("//a[@page-id='cfdf0029-ad61-4eae-b18a-ad27eef968d5']")));
 		try {
 			CommonFunctionUtils.waitForSpinnerGoesOff();
 			CommonFunctionUtils.activeButtonClick("Next");
@@ -32,11 +24,19 @@ public class InsuranceFormPage extends ExternalUtils {
 			CommonFunctionUtils.activeButtonClick("Next");
 		}
 	}
-
+	
+	public void ApplicationTabEsign() {
+		esignPdf("HUB Drive Online Privacy Notice-US.pdf", "Click to sign the document");
+		esignPdf("HUB Drive Online Terms and Conditions US.pdf", "Click to sign the document");
+		esignPdf("HUB Drive Online EULA US.pdf", "Click to sign the document");
+	}
+	
+	public void ApplicationTabWithEsign(HashMap<String, String> input) {
+		//ApplicationTabEsign();
+		ApplicationTab(input);
+	}
+	
 	public void ApplicationTab(HashMap<String, String> input) {
-//		esignPdf("HUB Drive Online Privacy Notice-US.pdf", "Click to sign the document");
-//		esignPdf("HUB Drive Online Terms and Conditions US.pdf", "Click to sign the document");
-//		esignPdf("HUB Drive Online EULA US.pdf", "Click to sign the document");
 		CommonFunctionUtils.waitForSpinnerGoesOff();
 		CommonFunctionUtils
 				.checkBoxClick("I have read the HDOL Privacy Policy. I agree with the terms and conditions.");
@@ -69,9 +69,7 @@ public class InsuranceFormPage extends ExternalUtils {
 		CommonFunctionUtils.addTextToTheInputField("Contact Last Name", input.get("Contact Last Name"));
 		CommonFunctionUtils.selectItemFromDropdown("Role Type", input.get("Role Type"));
 		CommonFunctionUtils.addTextToTheInputField("Business Phone", input.get("Business Phone"));
-		CommonFunctionUtils.addTextToTheInputField("Mobile Phone", input.get("Mobile Phone"));
-		// CommonFunctionUtils.addEmailToTheInputField("Email Address", input.get("Email
-		// Address"));
+		CommonFunctionUtils.addTextToTheInputField("Mobile Phone", input.get("Mobile Phone"));		
 		addInputToDatagrid("data[locationInformationGrid][0][address]", input.get("loc Address"));
 		addInputToDatagrid("data[locationInformationGrid][0][city]", input.get("loc City"));
 		selectChoicesDropdownValue("data[locationInformationGrid][0][stateProvince]", input.get("loc State"));

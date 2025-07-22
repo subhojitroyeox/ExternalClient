@@ -10,8 +10,9 @@ import com.eox.externalhdo.elementfleet.base.Basetest;
 public class EditUserDetails extends Basetest{
 
     @Test
-    public void EditUserDetails(HashMap<String, String> input) throws InterruptedException {
-       userManagementPage.umPage(input);
+    public void EditUserDetai() throws InterruptedException {
+    	userManagementEditPage.umPage("Stevejack.ha@hubinternational.com");
+     
         
     }
 

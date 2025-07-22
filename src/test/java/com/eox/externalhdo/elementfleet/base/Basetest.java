@@ -19,17 +19,13 @@ import com.eox.externalhdo.elementfleet.hdolutils.ExternalUtils;
 import com.eox.externalhdo.elementfleet.pages.EditApplicationPage;
 import com.eox.externalhdo.elementfleet.pages.FormSubmitPage;
 import com.eox.externalhdo.elementfleet.pages.InsuranceFormPage;
-import com.eox.externalhdo.elementfleet.pages.PaymentPage;
 import com.eox.externalhdo.elementfleet.pages.ReferralConditionPage;
-import com.eox.externalhdo.elementfleet.pages.SendApplicationPage;
 import com.eox.externalhdo.elementfleet.pages.TileAccessValidationPage;
 import com.eox.externalhdo.elementfleet.pages.UnitsEquipmentDataGridPage;
 import com.eox.externalhdo.elementfleet.pages.UserManagementPage;
 import com.eox.externalhdo.elementfleet.hdolutils.ElementUtils;
 import com.eox.utils.CommonFunctionUtils;
-import com.eox.utils.FTNIPayment;
 import com.eox.utils.HDOUtils;
-import com.eox.utils.LoginUtils;
 import com.eox.utils.SupportUtils;
 import com.eox.utils.WebDriverUtils;
 import com.fasterxml.jackson.core.type.TypeReference;
@@ -40,7 +36,7 @@ public class Basetest {
 	public static CommonFunctionUtils cu;
 	public static UserManagementPage userManagementPage;
 	public static UserManagementClientAdminPage userManagementClientAdminPage;
-	public static UserManagementEditPage userManagementEditPage;
+	public static UserManagementEditPage userManagementEditPage ;
 	public static UserManagementPage UmPage;
 	public static ExternalUtils utils;
 	public static ReferralConditionPage referralpage;
@@ -50,13 +46,6 @@ public class Basetest {
 	public static TileAccessValidationPage tilevalidate;
 	public static EditApplicationPage editpage;
 	public static HDOUtils hdoutils;
-	public static PaymentPage payment;
-	public static SendApplicationPage referralCheck;
-	public static LoginUtils loginUtils;
-	public static FTNIPayment fTNIPayment;
-	private static String web_URL = SupportUtils.getProperty("hdoStage");
-	private static String userID = SupportUtils.getProperty("clientadminusername");
-	private static String password = SupportUtils.getProperty("clientadminpassword");
 
 	@BeforeSuite
 	public static void initializebrowser() {
@@ -74,21 +63,22 @@ public class Basetest {
 		tilevalidate = new TileAccessValidationPage(driver);
 		editpage = new EditApplicationPage(driver);
 		hdoutils = new HDOUtils(driver);
-		payment = new PaymentPage(driver);
-		referralCheck = new SendApplicationPage(driver);
-		loginUtils = new LoginUtils(driver, web_URL, userID, password);
-		fTNIPayment = new FTNIPayment(driver);
 
 	}
 
 	@BeforeTest
 	public static void loginSetup() {
-		LoginUtils.loginToApplication("HDO");
+		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("elementusername"),
+		SupportUtils.getProperty("elementpassword"),null);
+//		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("hubadminusername"),
+//		SupportUtils.getProperty("hubadminpassword"));
+//		CommonFunctionUtils.loginToApplication(SupportUtils.getProperty("clientadminusername"),
+//		SupportUtils.getProperty("clientadminpassword"));
 	}
-
-//	@AfterTest
-//	public static void terminate() {
-//		driver.close();
+//	 @AfterTest
+//	public static void terminate()
+//	{
+//		 driver.close();
 //	}
 
 	// @AfterSuite
@@ -99,7 +89,7 @@ public class Basetest {
 	public List<HashMap<String, String>> getJsonDataToMap(String filepath) throws IOException {
 		// read json to string
 		String jsonContent = FileUtils.readFileToString(new File(filepath), StandardCharsets.UTF_8);
-		// String to Hashmap using Jackson databind
+		// String to Json using Jackson databind
 		ObjectMapper mapper = new ObjectMapper();
 		List<HashMap<String, String>> data = mapper.readValue(jsonContent,
 				new TypeReference<List<HashMap<String, String>>>() {

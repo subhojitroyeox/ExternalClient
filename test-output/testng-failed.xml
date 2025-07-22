@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.eox.externalhdo.elementfleet.test.InsuranceFormExcelUpload">
+      <class name="com.eox.externalhdo.elementfleet.tests.CreateProducer">
         <methods>
           <include name="loginSetup"/>
-          <include name="excelUpload" invocation-numbers="0"/>
+          <include name="createProducer" invocation-numbers="0"/>
           <include name="initializebrowser"/>
         </methods>
-      </class> <!-- com.eox.externalhdo.elementfleet.test.InsuranceFormExcelUpload -->
+      </class> <!-- com.eox.externalhdo.elementfleet.tests.CreateProducer -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

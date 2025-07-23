@@ -16,13 +16,5 @@ public class EditApplicationTest extends Basetest {
 	public void editApplication() throws InterruptedException {
 		editpage.searchAndEditApplicationForCompany("Main Test Company");
 		editpage.editAndSubmit();
-
 	}
-
-//	@DataProvider
-//	public Object[][] getData() throws IOException {
-//		List<HashMap<String, String>> data = getJsonDataToMap(
-//				System.getProperty("user.dir") + "//src//test//java//data//InsuranceForm.json");
-//		return new Object[][] { { data.get(0) } };
-//	};
 }

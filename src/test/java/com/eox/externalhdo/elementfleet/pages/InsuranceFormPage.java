@@ -1,10 +1,15 @@
 package com.eox.externalhdo.elementfleet.pages;
 
 import java.util.HashMap;
+import java.util.NoSuchElementException;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
 import com.eox.externalhdo.elementfleet.hdolutils.ExternalUtils;
 import com.eox.utils.CommonFunctionUtils;
+import com.eox.utils.SupportUtils;
 
 public class InsuranceFormPage extends ExternalUtils {
 	public static WebDriver driver;
@@ -15,31 +20,30 @@ public class InsuranceFormPage extends ExternalUtils {
 	}
 
 	public void welcomeTab() {
-		CommonFunctionUtils.elementClick(driver.findElement(By.xpath("//i[@class='fa fa-refresh']//parent::button[@class='btn btn-primary']")));
-		CommonFunctionUtils.elementClick(driver.findElement(By.xpath("//a[@page-id='cfdf0029-ad61-4eae-b18a-ad27eef968d5']")));
-		try {
-			CommonFunctionUtils.waitForSpinnerGoesOff();
-			CommonFunctionUtils.activeButtonClick("Next");
-		} catch (Exception e) {
-			CommonFunctionUtils.activeButtonClick("Next");
-		}
+
+		CommonFunctionUtils.elementClick(
+				driver.findElement(By.xpath("//i[@class='fa fa-refresh']//parent::button[@class='btn btn-primary']")));
+		CommonFunctionUtils
+				.elementClick(driver.findElement(By.xpath("//a[@page-id='cfdf0029-ad61-4eae-b18a-ad27eef968d5']")));
+		waitForEntryLoadWithRetry();
+		CommonFunctionUtils.activeButtonClick("Next");
+
 	}
-	
+
 	public void ApplicationTabEsign() {
 		esignPdf("HUB Drive Online Privacy Notice-US.pdf", "Click to sign the document");
 		esignPdf("HUB Drive Online Terms and Conditions US.pdf", "Click to sign the document");
 		esignPdf("HUB Drive Online EULA US.pdf", "Click to sign the document");
 	}
-	
+
 	public void ApplicationTabWithEsign(HashMap<String, String> input) {
-		//ApplicationTabEsign();
+		ApplicationTabEsign();
 		ApplicationTab(input);
+
 	}
-	
+
 	public void ApplicationTab(HashMap<String, String> input) {
-		CommonFunctionUtils.waitForSpinnerGoesOff();
-		CommonFunctionUtils
-				.checkBoxClick("I have read the HDOL Privacy Policy. I agree with the terms and conditions.");
+		CommonFunctionUtils.checkBoxClick("I have read the HDOL Privacy Policy. I agree with the terms and conditions.");
 		CommonFunctionUtils.checkBoxClick("I have read and agree to the HDOL terms and conditions.");
 		CommonFunctionUtils.checkBoxClick("I agree to the terms of the End User License Agreement");
 		CommonFunctionUtils.activeButtonClick("Next");
@@ -51,7 +55,7 @@ public class InsuranceFormPage extends ExternalUtils {
 				"Do you require insurance on units and equipment other than the Element-Leased units and equipment?");
 		CommonFunctionUtils.activeButtonClick("Next");
 		CommonFunctionUtils.selectItemFromDropdown("Company Type", input.get("Company"));
-		CommonFunctionUtils.addTextToTheInputField("Proposed Effective Date", "07-15-2025");
+		CommonFunctionUtils.addTextToTheInputField("Proposed Effective Date", input.get("Effective date"));
 		CommonFunctionUtils.addTextToTheInputField("MC Number", input.get("MC Number"));
 		CommonFunctionUtils.addTextToTheInputField("DOT Number", input.get("DOT Number"));
 		CommonFunctionUtils.addTextToTheInputField("SIC", input.get("SIC"));
@@ -69,7 +73,7 @@ public class InsuranceFormPage extends ExternalUtils {
 		CommonFunctionUtils.addTextToTheInputField("Contact Last Name", input.get("Contact Last Name"));
 		CommonFunctionUtils.selectItemFromDropdown("Role Type", input.get("Role Type"));
 		CommonFunctionUtils.addTextToTheInputField("Business Phone", input.get("Business Phone"));
-		CommonFunctionUtils.addTextToTheInputField("Mobile Phone", input.get("Mobile Phone"));		
+		CommonFunctionUtils.addTextToTheInputField("Mobile Phone", input.get("Mobile Phone"));
 		addInputToDatagrid("data[locationInformationGrid][0][address]", input.get("loc Address"));
 		addInputToDatagrid("data[locationInformationGrid][0][city]", input.get("loc City"));
 		selectChoicesDropdownValue("data[locationInformationGrid][0][stateProvince]", input.get("loc State"));
@@ -87,11 +91,11 @@ public class InsuranceFormPage extends ExternalUtils {
 
 		addInputToDatagrid("data[subsidiaryCompanyName]", "Test Firstname");
 		addInputToDatagrid("[relationshipDescription1]", "test description");
-		addInputToDatagrid("data[percentageOfOwnership1]", "20");
-		selectChoicesDropdownValue("data[inWhatRadiusDoTheMajorityOfYourVehiclesOperateInMiles]", "0-50");
+		addInputToDatagrid("data[percentageOfOwnership1]", input.get("Percentage of Ownership2"));
+		selectChoicesDropdownValue("data[inWhatRadiusDoTheMajorityOfYourVehiclesOperateInMiles]", input.get("radius"));
 		selectChoicesDropdownValue("data[whatIsTheUseForTheMajorityOfYourVehicles]",
 				input.get("What is the Use for the majority of your vehicles?"));
-		selectChoicesDropdownValue("data[pleaseSelectYourPerOccurrenceDeductibleInCad]", "2500");
+		selectChoicesDropdownValue("data[pleaseSelectYourPerOccurrenceDeductibleInCad]", input.get("Deductible"));
 
 		CommonFunctionUtils.radioButtonSelect(input.get("Would you like to add tow coverage?"),
 				"Would you like to add tow coverage?");
@@ -170,6 +174,36 @@ public class InsuranceFormPage extends ExternalUtils {
 
 		CommonFunctionUtils.activeButtonClick("Next");
 		CommonFunctionUtils.activeButtonClick("Next");
+	}
+
+	public void waitForEntryLoadWithRetry() {
+		int maxRetries = 30;
+		int retryIntervalMillis = 1500;
+
+		for (int attempt = 1; attempt <= maxRetries; attempt++) {
+			System.out.println("Attempt " + attempt + " to wait for quote generation invisibility...");
+			try {
+				CommonFunctionUtils.waitForSpinnerGoesOff();
+
+				System.out.println("Quote generation message disappeared successfully.");
+				return;
+			} catch (NoSuchElementException e) {
+				System.out.println(
+						"Quote generation message not found in DOM (yet or not applicable). Proceeding with next check.");
+				return;
+			} catch (Exception e) {
+				System.out.println("Failed to wait for invisibility on attempt " + attempt + ": " + e.getMessage());
+
+				if (attempt < maxRetries) {
+					System.out.println("Retrying in " + (retryIntervalMillis / 1000.0) + " seconds...");
+					SupportUtils.waitFor(retryIntervalMillis);
+				} else {
+					System.err.println("Maximum retries reached. Quote generation message did not disappear.");
+					throw new RuntimeException(
+							"Quote generation message did not disappear after " + maxRetries + " attempts.", e);
+				}
+			}
+		}
 	}
 
 }

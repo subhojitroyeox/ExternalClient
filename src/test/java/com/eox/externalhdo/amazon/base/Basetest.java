@@ -54,8 +54,8 @@ public class Basetest {
 	public static LoginUtils loginUtils;
 	public static FTNIPayment fTNIPayment;
 	private static String web_URL = SupportUtils.getProperty("hdoStage");
-	private static String userID = SupportUtils.getProperty("Hdo_username");
-	private static String password = SupportUtils.getProperty("Hdo_password");
+	private static String userID = SupportUtils.getProperty("dspUsername");
+	private static String password = SupportUtils.getProperty("dspPassword");
 
 	@BeforeSuite
 	public static void initializebrowser() {

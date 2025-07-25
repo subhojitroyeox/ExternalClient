@@ -1,237 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="4" passed="1" failed="3" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-07-22T23:20:23 IST" name="Default suite" finished-at="2025-07-22T23:22:06 IST" duration-ms="103076">
+  <suite started-at="2025-07-24T15:55:31 IST" name="Default suite" finished-at="2025-07-24T15:56:01 IST" duration-ms="29848">
     <groups>
     </groups>
-    <test started-at="2025-07-22T23:20:23 IST" name="Default test" finished-at="2025-07-22T23:22:06 IST" duration-ms="103076">
-      <class name="com.eox.externalhdo.elementfleet.tests.EF_E2ETest">
-        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:20:02 IST" name="initializebrowser" finished-at="2025-07-22T23:20:23 IST" duration-ms="21414" status="PASS">
+    <test started-at="2025-07-24T15:55:31 IST" name="Default test" finished-at="2025-07-24T15:56:01 IST" duration-ms="29848">
+      <class name="com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest">
+        <test-method is-config="true" signature="initializebrowser()[pri:0, instance:com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest@480d3575]" started-at="2025-07-24T15:55:21 IST" name="initializebrowser" finished-at="2025-07-24T15:55:31 IST" duration-ms="9622" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initializebrowser -->
-        <test-method is-config="true" signature="loginSetup()[pri:0, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:20:23 IST" name="loginSetup" finished-at="2025-07-22T23:20:24 IST" duration-ms="445" status="PASS">
+        <test-method is-config="true" signature="loginSetup()[pri:0, instance:com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest@480d3575]" started-at="2025-07-24T15:55:31 IST" name="loginSetup" finished-at="2025-07-24T15:55:31 IST" duration-ms="282" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginSetup -->
-        <test-method signature="insuranceApplicationSubmission(java.util.HashMap)[pri:2, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:20:24 IST" name="insuranceApplicationSubmission" data-provider="getData" finished-at="2025-07-22T23:21:01 IST" duration-ms="37389" status="FAIL">
+        <test-method signature="mandatoryCheck(java.util.HashMap)[pri:0, instance:com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest@480d3575]" started-at="2025-07-24T15:55:31 IST" name="mandatoryCheck" data-provider="getData" finished-at="2025-07-24T15:56:01 IST" duration-ms="29472" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[{leased_unit_Cap Cost (Original cost + Upfit value)(in USD)=43500, leased_unit_Lease Term (in Months)=25, Address=NY, loc Zip Code=23451, Policy Number=TEST23254, Premium=250,000, fein=456543455, non_leased_units_ACV (Actual Cost Value) (in USD)=4, Tow limit=10,000, Business Phone=4565761234, Do operations involve transporting hazardous material?=no, Are you aware of any manufacturer defects?=no, non_leased_units_City=Dallas city, leased_equipment_Serial Number=CAT0320GCLX123456, leased_unit_Zip Code=75201, Is a formal safety program in operation?=yes, leased_unit_Deductible (in USD)=1000, Any vehicles owned but not scheduled on this application?=no, non_leased_units_Year=2025, leased_equipment_Make=Caterpillar, non_leased_units_Gross Vehicle Weight (in lbs)=14,001 – 16,000 lbs, non_leased_equipments_Model=320 GC Hydraulic Excavator, Any policy or coverage declined, cancelled=yes, non_leased_equipments_Deductible (in USD)=1000, In what radius do the majority of your vehicles operate?=0-50, loc Address=NY, Do you require insurance on units and equipment=yes, Contact First Name=Test, Contact Last Name=Test, MC Number=TEST123456, non_leased_equipments_Year=2025, non_leased_equipments_Equipment Value=4, Last Name=TEST, leased_equipment_Zip Code=75201, leased_unit_Make=Ford, Are you a subsidiary of another entity?=yes, Are any vehicles leased to others?=no, loss_payee_Zip Code=75201, DOT Number=432343234324, leased_unit_VIN #=1FTBR1C8XRKA12345, Percentage of Ownership2=, Percentage of Ownership1=, leased_equipment_Category=Lifts, Does applicant have other business ventures for which coverage is not requested?=yes, leased_equipment_Equipment Number=Test-123, What is the Use for the majority of your vehicles?=Service, Role Type=Accounting, non_leased_units_Zip Code=75201, lessor_State=AZ, non_leased_units_License Plate Number=TXL-8923, Webiste=www.elementfleet.com, Nature of Business=Service, Do you have a dedicated Safety Manager?=yes, Is there any loss of value at repossession?=no, Has there been any blowouts, punctures, or other road damage to tires?=no, Describe other operations for which coverage is not requested=Test, Is there a vehicle maintenance program in operation?=no, non_leased_equipments_Make=Caterpillar, non_leased_equipments_Zip Code=75201, loss_payee_Address=1234 Elm Street, non_leased_units_Vehicle Type=Heavy Trucks, non_leased_units_Make=Ford, non_leased_units_State of License Registration=AL, leased_unit_State=AZ, non_leased_units_Address=1234 Elm Street, Has there been any loss due to mysterious disappearance or damage caused by a criminal act?=no, Year=2020, Has there been any loss due to conversion, embezzlement, or secretion of the vehicle?=no, non_leased_equipments_State=AZ, Do you have any subsidiaries?=yes, Parent Company Name=TEST, loc State=NY, Please select your per occurrence Deductible. (in USD)=1000, Subsidiary Company Name =TEST, loss_payee_State=AZ, leased_unit_Model=Transit 250, leased_equipment_Address=1234 Elm Street, non_leased_equipments_Address=1234 Elm Street, Company=Joint Venture, leased_unit_Lease Start Date=07/13/2025, First Name=TEST, non_leased_units_VIN #=1FTBR1C8XRKA12345, applicant Zip Code=345765, leased_unit_Gross Vehicle Weight (in lbs)=14,001 – 16,000 lbs, leased_unit_State of License Registration=AL, Please describe primary operations=TEST, leased_equipment_Vehicle Type=Forklifts, NAICS=432123, Do you want to create a list of loss payees?=yes, loss_payee_Name=LoasssPayee1, non_leased_units_Is there an Additional Upfitting component?=no, leased_unit_Unit Number=Unit-123, non_leased_units_Do you intend to use this unit for less than 30 days?=No, Has there been any mechanical or electrical breakdown of the vehicles?=no, Carrier=Liberty Mutual Fire Insurance Company, leased_equipment_Year=2025, leased_equipment_Deductible (in USD)=1000, leased_equipment_State=AZ, non_leased_equipments_Is this a Pool Vehicle?=no, Would you like to add tow coverage?=yes, non_leased_equipments_Equipment Number=Test-123, non_leased_equipments_Vehicle Type=Forklifts, Has there been any damage due to gradual deterioration or the effects of improper/lack of maintenance?=no, City=NY, SIC=6361-32, lessor_Address=1234 Elm Street, Do you want to add more than 5 Element Leased Equipment?=no, leased_equipment_Equipment Value=4000, Do you want to add more than 5 Element Leased Units?=no, Proposed Effective date=07-08-2025, State=NY, leased_unit_Is this a Pool Vehicle?=no, Relationship Description=TEST, Any hold harmless agreements?=no, non_leased_equipments_Serial Number=CAT0320GCLX123456, Mobile Phone=2143254652, lessor_City=Dallas city, Email Address=, leased_equipment_City=Dallas city, Expiration Date=07-08-2026, non_leased_units_Model=Transit 250, leased_unit_City=Dallas city, Do over 50% of the employees use their autos in the business?=no, Broker Name=TEST, leased_unit_Vehicle Type=Heavy Trucks, loc City=NY, Reason=Non-Payment, leased_equipment_Lease Start Date=07/13/2022, Are any non-licensed drivers allowed to operate the vehicles?=no, non_leased_units_State=AZ, Any vehicles used by family members? If so, identify=no, Effective Date=07-08-2025, Do you want to add more than 5 Non-Element leased Equipment?=no, lessor_Name=Lessor1, non_leased_equipments_Category=Lifts, non_leased_equipments_City=Dallas city, Has there been any damage caused by normal wear and tear on the vehicles?=no, non_leased_units_Deductible (in USD)=1000, Do you obtain MVR (Motor Vehicle Report) verifications?=no, Do you want to create a list of lessors?=yes, leased_unit_License Plate Number=TXL-8923, leased_unit_Do you intend to use this unit for less than 30 days?=no, leased_unit_Address=1234 Elm Street, loss_payee_City=Dallas city, leased_equipment_Model=320 GC Hydraulic Excavator, lessor_Zip Code=75201, leased_unit_Year=2025, leased_equipment_Lease Term=25, Date Business Started=07-08-2025, Has there been any damage caused by freezing or extreme weather conditions?=no, Address Line 2=NY}]]>
+                <![CDATA[{Line of Business=Auto Liability, Policy Number=234323, first two=test, Company type=Limited Liability Corporation, Total Estimated Monthly Payroll for Garage Employees=1000, Do any employees take a scheduled vehicle home at night?=yes, Primary Owner Last Name=Kumar, Do any drivers provide installation or assembly services?=yes, Are you contracted with any other motor carrier?=yes, Describe Other Employee Role Types=NA, Number of Clerical Employees=5, Broker Email=testbroker+34@email.com, Principle Garaging Address=test principle add, Amazon DSP Number=BFLG, Broker Company=test broker company, Total Estimated Monthly Payroll specific to drivers performing installation or assembly services=23,432, Loss Runs Pro=no, Primary Owner First Name=Rakshith, First Client Claims Contact Name=Edge test, Insurer=test insurer, Description of Operations at this Location1=Parking, Expiration Date=06-01-2027, Zip Code1=87898, Percentage of Ownership=80, First Client Claims Contact Email=edge@testuser.com, Are any filings required?=yes, Mailing Address=test mailing add, Total Estimated Monthly Payroll for Clerical Employees=1500, Date First Contracted with Amazon=06-04-2025, Total Estimated Monthly Payroll for Employees Outside Sales=9000, Is there more than one owner?=yes, State1=Alaska, operate under your authority=yes, Number of Other Employees=3, What types of responsibilities does this owner=Nonhelper, Effective Date=06-01-2026, Insurer Email=testinsurer@email.com, Do employees, including admin staff, ever use personal vehicles while working?=yes, What percentage of vehicles travel outside of 50 miles radius?=100, Year CM=2, Total Estimated Monthly Payroll for Drivers not including installation or assembly services=1999, Broker FirstName=test, Year Business Established=2020, City1=testcity, Number of Employees Outside Sales=9, Number of Garage Employees=5, Location1=test location, Number of Drivers=8, Total Estimated Monthly Payroll for Other Employees=566, Street Address1=test address, annual cost=50, limit of insurance=3, Number of Vehicles=123, If yes, please list=test list, how many=5}]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] "}
-  (Session info: chrome=138.0.7204.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f9115af03212cb9248cda0b7f1a7f9d6, findElement {using=xpath, value=//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] }]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] "}
-  (Session info: chrome=138.0.7204.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f9115af03212cb9248cda0b7f1a7f9d6, findElement {using=xpath, value=//*[contains(text(),'Do you require insurance on units and equipment other than the Element-Leased units and equipment?')]/following::input[contains(@id,'yes')and @type='radio'] }]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:367)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:361)
-at com.eox.utils.CommonFunctionUtils.radioButtonSelect(CommonFunctionUtils.java:63)
-at com.eox.externalhdo.elementfleet.pages.InsuranceFormPage.insuranceandApplicantInformationTab(InsuranceFormPage.java:50)
-at com.eox.externalhdo.elementfleet.tests.EF_E2ETest.insuranceApplicationSubmission(EF_E2ETest.java:27)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- insuranceApplicationSubmission -->
-        <test-method signature="producerSendapplication()[pri:3, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:21:01 IST" name="producerSendapplication" finished-at="2025-07-22T23:21:34 IST" duration-ms="32288" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- producerSendapplication -->
-        <test-method signature="publishQuotetest()[pri:4, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:21:34 IST" name="publishQuotetest" finished-at="2025-07-22T23:21:54 IST" duration-ms="20369" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for invisibility of [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //div[@class='spinner']] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for invisibility of [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //div[@class='spinner']] (tried for 10 second(s) with 500 milliseconds interval)
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at com.eox.utils.CommonFunctionUtils.waitForSpinnerGoesOff(CommonFunctionUtils.java:150)
-at com.eox.externalhdo.elementfleet.pages.Producerquotepublishpage.publishquoteaction(Producerquotepublishpage.java:19)
-at com.eox.externalhdo.elementfleet.tests.EF_E2ETest.publishQuotetest(EF_E2ETest.java:45)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- publishQuotetest -->
-        <test-method signature="quoteAccept()[pri:5, instance:com.eox.externalhdo.elementfleet.tests.EF_E2ETest@17bffc17]" started-at="2025-07-22T23:21:54 IST" name="quoteAccept" finished-at="2025-07-22T23:22:06 IST" duration-ms="12289" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
-            <message>
-              <![CDATA[stale element reference: stale element not found in the current frame
-  (Session info: chrome=138.0.7204.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f9115af03212cb9248cda0b7f1a7f9d6, isElementDisplayed {id=f.5765B6148698C01C69C869F66BC65EA7.d.59B4C598CF32F4D7697FE9D3803C736B.e.306}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //a[contains(@title,'Insurance') and contains(normalize-space(), 'Quotes')]]
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found in the current frame
-  (Session info: chrome=138.0.7204.101)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.34.0', revision: '707dcb4246*'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.6'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [f9115af03212cb9248cda0b7f1a7f9d6, isElementDisplayed {id=f.5765B6148698C01C69C869F66BC65EA7.d.59B4C598CF32F4D7697FE9D3803C736B.e.306}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 138.0.7204.101, chrome: {chromedriverVersion: 138.0.7204.157 (e533e98b126..., userDataDir: C:\Users\SUBHOJ~1\AppData\L...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52384}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52384/devtoo..., se:cdpVersion: 138.0.7204.101, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (f9115af03212cb9248cda0b7f1a7f9d6)] -> xpath: //a[contains(@title,'Insurance') and contains(normalize-space(), 'Quotes')]]
-Session ID: f9115af03212cb9248cda0b7f1a7f9d6
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:215)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:544)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.isDisplayed(RemoteWebElement.java:282)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:656)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:652)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-at com.eox.utils.CommonFunctionUtils.elementClick(CommonFunctionUtils.java:32)
-at com.eox.utils.HDOUtils.openTiles(HDOUtils.java:40)
-at com.eox.externalhdo.elementfleet.pages.producerquoteacceptpage.quoteaccept(producerquoteacceptpage.java:23)
-at com.eox.externalhdo.elementfleet.tests.EF_E2ETest.quoteAccept(EF_E2ETest.java:53)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- quoteAccept -->
-      </class> <!-- com.eox.externalhdo.elementfleet.tests.EF_E2ETest -->
+        </test-method> <!-- mandatoryCheck -->
+      </class> <!-- com.eox.externalhdo.amazon.test.MyCompanyMandatoryTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

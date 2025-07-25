@@ -4,12 +4,11 @@ import org.testng.annotations.Test;
 
 import com.eox.externalhdo.elementfleet.base.Basetest;
 
-public class Producerquotepublishtest extends Basetest{
+public class Producerquotepublishtest extends Basetest {
 
 	@Test
-	public void publishquotetest()
-	{
+	public void publishquotetest() {
+		extent.createTest("publishing Quote");
 		publishquote.publishquoteaction();
 	}
-	}
-
+}

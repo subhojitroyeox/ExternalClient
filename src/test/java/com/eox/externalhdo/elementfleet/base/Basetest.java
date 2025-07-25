@@ -7,10 +7,12 @@ import java.util.HashMap;
 import java.util.List;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import com.eox.externalhdo.elementfleet.pages.UserManagementClientAdminPage;
 import com.eox.externalhdo.elementfleet.pages.UserManagementEditPage;
+import com.aventstack.extentreports.ExtentReports;
 import com.eox.externalhdo.elementfleet.hdolutils.ExternalUtils;
 import com.eox.externalhdo.elementfleet.pages.Clientadmingethelpandsubmitpage;
 import com.eox.externalhdo.elementfleet.pages.Clientadminsaveandclosepage;
@@ -38,6 +40,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 public class Basetest {
 	public static WebDriver driver;
 	public static CommonFunctionUtils cu;
+	public static ExtentReports extent;
 	public static UserManagementPage userManagementPage;
 	public static UserManagementClientAdminPage userManagementClientAdminPage;
 	public static UserManagementEditPage userManagementEditPage;
@@ -55,12 +58,12 @@ public class Basetest {
 	public static FTNIPayment fTNIPayment;
 //	From thimmesh 
 	public static Producersendapplicationpage sendapp;
-	public static Producerquotepublishpage  publishquote;
+	public static Producerquotepublishpage publishquote;
 	public static producerquoteacceptpage quoteaccepted;
 	public static Clientadmingethelpandsubmitpage gethelpandsubmit;
 	public static Clientadminsaveandclosepage saveandclose;
 	public static clientadmincancelpage cancel;
-	
+
 //	String variable 
 	private static String web_URL = "https://hdoustest.eoxvantage.com/#login";
 	private static String userID = SupportUtils.getProperty("clientadminusername");
@@ -71,6 +74,7 @@ public class Basetest {
 		driver = WebDriverUtils.getDriver();
 		driver.get("https://hdoustest.eoxvantage.com/#login");
 		cu = new CommonFunctionUtils(driver, 10);
+		extent = SupportUtils.getInstance();
 		userManagementPage = new UserManagementPage(driver);
 		userManagementClientAdminPage = new UserManagementClientAdminPage(driver);
 		userManagementEditPage = new UserManagementEditPage(driver);
@@ -87,7 +91,7 @@ public class Basetest {
 		fTNIPayment = new FTNIPayment(driver);
 //		From thimmesh 
 		sendapp = new Producersendapplicationpage(driver);
-		publishquote = new Producerquotepublishpage(driver);
+		publishquote = new Producerquotepublishpage(driver, extent);
 		quoteaccepted = new producerquoteacceptpage(driver);
 		gethelpandsubmit = new Clientadmingethelpandsubmitpage(driver);
 		saveandclose = new Clientadminsaveandclosepage(driver);
@@ -99,11 +103,6 @@ public class Basetest {
 	public static void loginSetup() {
 		LoginUtils.loginToApplication("HDO");
 	}
-
-//	@AfterTest
-//	public static void terminate() {
-//		driver.close();
-//	}
 
 	// @AfterSuite
 //	public static void terminate()
@@ -121,4 +120,8 @@ public class Basetest {
 		return data;
 	}
 
+	@AfterSuite
+	public static void terminate() {
+		extent.flush();
+	}
 }

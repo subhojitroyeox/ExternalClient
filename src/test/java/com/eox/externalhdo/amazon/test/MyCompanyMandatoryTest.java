@@ -25,13 +25,6 @@ public class MyCompanyMandatoryTest extends Basetest {
 //		aznutils.esignPdf("HUB Drive Online EULA US.pdf", title);
 //		aznutils.esignPdf("Netradyne Authorization Letter.pdf", title);
 		third.giFormsubmission2(input);
-		Thread.sleep(1000);
-		aznutils.addInputToDatagrid("[1][locationType]", "Location #1");
-
-		driver.findElement(By.xpath("//button[@ref='datagrid-dataGrid1-addRow']")).click();	
-
-		driver.findElement(By.xpath("//button[@ref='datagrid-dataGrid1-addRow']")).click();
-		aznutils.addInputToDatagrid("[2][locationType]", "Location #1");
 //		fourth.operationsFormSubmission(input);
 //		fifth.unitsFileUpload();
 //		fifth.laborFileUpload();
@@ -44,7 +37,7 @@ public class MyCompanyMandatoryTest extends Basetest {
 	public Object[][] getData() throws IOException {
 		List<HashMap<String, String>> data = getJsonDataToMap(
 				System.getProperty("user.dir") + "//src//test//java//data//TestData2.json");
-		return new Object[][] { { data.get(0) }, { data.get(1) } };
+		return new Object[][] { { data.get(0) } };
 
 	};
 

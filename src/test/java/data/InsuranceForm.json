@@ -2,7 +2,7 @@
     {
         "Do you require insurance on units and equipment": "yes",
         "Company": "Joint Venture",
-        "Proposed Effective date": "07-08-2025",
+        "Effective date": "07-23-2025",
         "MC Number": "TEST123456",
         "DOT Number": "432343234324",
         "SIC": "6361-32",
@@ -30,14 +30,14 @@
         "Are you a subsidiary of another entity?": "yes",
         "Parent Company Name": "TEST",
         "Relationship Description": "TEST",
-        "Percentage of Ownership1": "",
+        "Percentage of Ownership1": "80",
         "Do you have any subsidiaries?": "yes",
         "Subsidiary Company Name ": "TEST",
         "Relationship Description": "TEST",
-        "Percentage of Ownership2": "",
-        "In what radius do the majority of your vehicles operate?": "0-50",
+        "Percentage of Ownership2": "20",
+        "radius": "0-50",
         "What is the Use for the majority of your vehicles?": "Service",
-        "Please select your per occurrence Deductible. (in USD)": "1000",
+        "Deductible": "1000",
         "Would you like to add tow coverage?": "yes",
         "Tow limit": "10,000",
         "Is a formal safety program in operation?": "yes",
@@ -157,7 +157,7 @@
 			   "non_leased_equipments_City": "Dallas city",
 			   "non_leased_equipments_State": "AZ",
 			   "non_leased_equipments_Zip Code": "75201",
-			   "non_leased_equipments_Equipment Value": "4"
+			   "non_leased_equipments_Equipment Value": "4000"
 		  
 		
     }

@@ -27,6 +27,9 @@ public class ReferralConditionTest extends Basetest {
 
 	@Test
 	public void referraltest() {
+		loginUtils.switchUser("hub_1752834223754", "He_7aMRSek5i", "Element Fleet");
+		referralCheck.referralTab();
+		referralCheck.referralCheck();
 		}
 
 	@DataProvider
